@@ -9,14 +9,14 @@
     <!-- Header -->
     <header class="page-header">
       <div class="page-header__wrapper">
-        <a class="page-header__logo-link" href="">
+        <a class="page-header__logo-link">
           <img class="page-header__logo-image" src="#" width="75" height="22" alt="Pink">
         </a>
         <button class="toggle-modal page-header__toggle-modal" type="button">Menu</button>
         <nav class="main-nav">
           <ul class="main-nav__list site-list">
             <li class="site-list__item">
-              <a href="">Главная</a>
+              <a>Главная</a>
             </li>
             <li class="site-list__item">
               <a href="photo.html">Фотографии</a>
@@ -40,23 +40,21 @@
       <section class="download">
         <h2 class="visually-hidden">Скачайте приложение для вашего устройства здесь</h2>
         <div class="download__wrapper">
-          <div class="download-content">
-            <a class="download__main-link button" href="https://itunes.apple.com/ru/genre/ios/id36?mt=8">Скачать приложение</a>
-            <div class="download__secondary-links">
-              <a class="download__itunes" href="https://itunes.apple.com/ru/genre/ios/id36?mt=8">Itunes</a>
-              <a class="download__android" href="https://play.google.com/store?hl=ru">Google Play</a>
-              <a class="download__windows" href="https://www.microsoft.com/ru-ru/store/appsvnext/windows-phone">Windows Mobile</a>
-            </div>
-            <p class="download__description">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
-          </div>
+          <a class="download__main-link button" href="https://itunes.apple.com/ru/genre/ios/id36?mt=8">Скачать приложение</a>
+          <ul class="download__secondary-links secondary-links">
+            <li class="secondary-links__item"><a class="download__itunes" href="https://itunes.apple.com/ru/genre/ios/id36?mt=8">Itunes</a></li>
+            <li class="secondary-links__item"><a class="download__android" href="https://play.google.com/store?hl=ru">Google Play</a></li>
+            <li class="secondary-links__item"><a class="download__windows" href="https://www.microsoft.com/ru-ru/store/appsvnext/windows-phone">Windows Mobile</a></li>
+          </ul>
+          <p class="download__description">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
         </div>
       </section>
 
       <!-- Slogan Section -->
       <section class="slogan">
         <div class="slogan__wrapper">
-          <p class="slogan__item">Устали от серости мегаполиса?</p>
-          <p class="slogan__item">Нам есть, что вам предложить!</p>
+          <h2 class="slogan__item">Устали от серости мегаполиса?</h2>
+          <h2 class="slogan__item">Нам есть, что вам предложить!</h2>
         </div>
       </section>
 
@@ -64,19 +62,20 @@
       <section class="features">
         <h2 class="visually-hidden">Особенности приложения Pink</h2>
         <div class="features__wrapper">
-          <div class="features__item">
-            <b class="features__advantage bold-text">Поднимает настроение</b>
-            <p class="features__description">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
-          </div>
-          <div class="features__item">
-            <b class="features__advantage bold-text">Меняет мир вокруг</b>
-            <p class="features__description">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
-          </div>
-          <div class="features__item">
-            <b class="features__advantage bold-text">Заводит новых друзей</b>
-            <p class="features__description">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
-          </div>
-          <img class="features__image" src="#">
+          <ul class="features__list">
+            <li class="features__item">
+              <b class="features__advantage bold-text">Поднимает настроение</b>
+              <p class="features__description">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+            </li>
+            <li class="features__item">
+              <b class="features__advantage bold-text">Меняет мир вокруг</b>
+              <p class="features__description">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+            </li>
+            <li class="features__item">
+              <b class="features__advantage bold-text">Заводит новых друзей</b>
+              <p class="features__description">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
+            </li>
+          </ul>
         </div>
       </section>
 
@@ -110,19 +109,19 @@
       <section class="plans">
         <h2 class="visually-hidden">Наши тарифные планы</h2>
         <div class="plans__wrapper">
-          <table class="plans__table">
+          <table class="plans__table plans-table">
             <tr>
               <th>
-                <b class="table__plan">База</b>
-                <span class="table__price">1,99 USD</span>
+                <b class="plans-table__plan">База</b>
+                <span class="plans-table__price">1,99 USD</span>
               </th>
               <th>
-                <b class="table__plan">Стандарт</b>
-                <span class="table__price">3,99 USD</span>
+                <b class="plans-table__plan">Стандарт</b>
+                <span class="plans-table__price">3,99 USD</span>
               </th>
               <th>
-                <b class="table__plan">Анлим</b>
-                <span class="table__price">9,99 USD</span>
+                <b class="plans-table__plan">Анлим</b>
+                <span class="plans-table__price">9,99 USD</span>
               </th>
             </tr>
             <tr>
