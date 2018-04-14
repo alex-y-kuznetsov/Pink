@@ -55,9 +55,9 @@
           <h1 class="visually-hidden">Галлерея наших пользователей</h1>
 
           <acticle class="gallery__item gallery-item">
+            <h1 class="visually-hidden">Сообщение от пользователя: Анна</h1>
             <a href="#" class="gallery-item__enlarge-image">
-              <img src="#" class="gallery-item__image gallery-
-            item__image--panorama">
+              <img src="#" class="gallery-item__image gallery-item__image--panorama" alt="Фото пользователя: Анна">
             </a>
             <div class="gallery-item__content">
               <span class="gallery-item__user-name">Анна</span>
@@ -68,8 +68,9 @@
           </acticle>
 
           <acticle class="gallery__item gallery-item">
+            <h1 class="visually-hidden">Сообщение от пользователя: Левон</h1>
             <a href="#" class="gallery-item__enlarge-image">
-              <img src="#" class="gallery-item__image">
+              <img src="#" class="gallery-item__image" alt="Фото пользователя: Левон">
             </a>
             <div class="gallery-item__content">
               <span class="gallery-item__user-name">Левон</span>
@@ -80,8 +81,9 @@
           </acticle>
 
           <acticle class="gallery__item gallery-item">
+            <h1 class="visually-hidden">Сообщение от пользователя: Антон</h1>
             <a href="#" class="gallery-item__enlarge-image">
-              <img src="#" class="gallery-item__image">
+              <img src="#" class="gallery-item__image" alt="Фото пользователя: Антон">
             </a>
             <div class="gallery-item__content">
               <span class="gallery-item__user-name">Антон</span>
@@ -92,8 +94,9 @@
           </acticle>
 
           <acticle class="gallery__item gallery-item">
+            <h1 class="visually-hidden">Сообщение от пользователя: Борис</h1>
             <a href="#" class="gallery-item__enlarge-image">
-              <img src="#" class="gallery-item__image">
+              <img src="#" class="gallery-item__image" alt="Фото пользователя: Борис">
             </a>
             <div class="gallery-item__content">
               <span class="gallery-item__user-name">Борис</span>
@@ -104,8 +107,9 @@
           </acticle>
 
           <acticle class="gallery__item gallery-item">
+            <h1 class="visually-hidden">Сообщение от пользователя: Сергей</h1>
             <a href="#" class="gallery-item__enlarge-image">
-              <img src="#" class="gallery-item__image">
+              <img src="#" class="gallery-item__image" alt="Фото пользователя: Сергей">
             </a>
             <div class="gallery-item__content">
               <span class="gallery-item__user-name">Сергей</span>
@@ -116,8 +120,9 @@
           </acticle>
 
           <acticle class="gallery__item gallery-item">
+            <h1 class="visually-hidden">Сообщение от пользователя: Максим</h1>
             <a href="#" class="gallery-item__enlarge-image">
-              <img src="#" class="gallery-item__image">
+              <img src="#" class="gallery-item__image" alt="Фото пользователя: Максим">
             </a>
             <div class="gallery-item__content">
               <span class="gallery-item__user-name">Максим</span>
@@ -128,8 +133,9 @@
           </acticle>
 
           <acticle class="gallery__item gallery-item">
+            <h1 class="visually-hidden">Сообщение от пользователя: Надежда</h1>
             <a href="#" class="gallery-item__enlarge-image">
-              <img src="#" class="gallery-item__image">
+              <img src="#" class="gallery-item__image" alt="Фото пользователя: Надежда">
             </a>
             <div class="gallery-item__content">
               <span class="gallery-item__user-name">Надежда</span>
@@ -152,7 +158,9 @@
       <!-- Upload Section -->
       <section class="upload-section">
         <div class="upload-section__wrapper">
-          <img src="#" class="upload-section__image">
+          <div class="upload-section__image-window">
+            <img src="#" class="upload-section__image">
+          </div>
           <form action="https://echo.htmlacademy.ru" method="get" class="upload-section__controls upload-controls">
             <button type="button" class="upload-controls__crop">Crop</button>
             <button type="button" class="upload-controls__fill">Fill</button>
@@ -169,15 +177,19 @@
     <!-- Footer -->
     <footer class="page-footer">
       <div class="footer__wrapper">
-        <a class="page-footer__logo-link" href="index.html">
-          <img class="page-footer__logo-image" src="#" width="150" height="50" alt="Pink">
-        </a>
+        <div class="logo-block logo-block--footer">
+          <a class="logo-block__logo-link" href="index.html">
+            <img class="logo-block__logo-image" src="#" width="150" height="50" alt="Pink">
+          </a>
+        </div>
         <ul class="page-footer__social social-block">
           <li class="social-block__item"><a class="social-block__link" href="#">Twitter</a></li>
           <li class="social-block__item"><a class="social-block__link" href="#">Facebook</a></li>
           <li class="social-block__item"><a class="social-block__link" href="#">Youtube</a></li>
         </ul>
-        <span class="page-footer__copyright copyright">Разработано</span>
+        <div class="copyright">
+          <span class="copyright__developed-by">Разработано</span>
+        </div>
       </div>
     </footer>
 
