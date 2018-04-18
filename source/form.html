@@ -3,8 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Пинк</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
-  <body>
+  <body class="page-body">
 
     <!-- Header -->
     <header class="page-header">
@@ -16,16 +17,16 @@
         <nav class="main-nav">
           <ul class="main-nav__list site-list">
             <li class="site-list__item">
-              <a href="index.html">Главная</a>
+              <a class="main-nav__link" href="index.html">Главная</a>
             </li>
             <li class="site-list__item">
-              <a href="photo.html">Фотографии</a>
+              <a class="main-nav__link" href="photo.html">Фотографии</a>
             </li>
             <li class="site-list__item">
-              <a>Конкурс</a>
+              <a class="main-nav__link">Конкурс</a>
             </li>
             <li class="site-list__item">
-              <a href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+              <a class="main-nav__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
             </li>
           </ul>
         </nav>
@@ -38,7 +39,7 @@
       <!-- Page Title -->
       <section class="title-section">
         <div class="title-section__wrapper">
-          <h1 class="page-title">Конкурс на самое безбашенное путешествмие с Пинк</h1>
+          <h1 class="page-title">Конкурс на самое безбашенное путешествие с Пинк</h1>
         </div>
       </section>
 
@@ -55,18 +56,18 @@
           <form action="https://echo.htmlacademy.ru" method="get" class="apply-form">
 
             <div class="apply-form__name">
-              <fieldset>
-                <label for="last-name">Фамилия:</label>
+              <fieldset class="apply-form__fieldset">
+                <label class="apply-form__personal-data" for="last-name">Фамилия:</label>
                 <input type="text" id="last-name" placeholder="Укажите фамилию *" required>
-                <label for="first-name">Имя:</label>
+                <label class="apply-form__personal-data" for="first-name">Имя:</label>
                 <input type="text" id="first-name" placeholder="Введите имя *" required>
-                <label for="patronymic">Отчество:</label>
+                <label class="apply-form__personal-data" for="patronymic">Отчество:</label>
                 <input type="text" id="patronymic" placeholder="Ну и отчество тоже">
               </fieldset>
             </div>
 
             <div class="apply-form__achievments">
-              <fieldset>
+              <fieldset class="apply-form__fieldset">
                 <legend>Ваши безбашенные достижения в путешествии</legend>
                 <ul class="form-list">
                   <li class="form-list__item">
@@ -98,16 +99,16 @@
             </div>
 
             <div class="apply-form__contacts">
-              <fieldset>
-                <label for="phone">Номер телефона</label>
+              <fieldset class="apply-form__fieldset">
+                <label class="apply-form__personal-data" for="phone">Номер телефона</label>
                 <input type="tel" id="phone" placeholder="Номер, пожалуйста">
-                <label for="email">Адрес почты</label>
+                <label class="apply-form__personal-data" for="email">Адрес почты</label>
                 <input type="email" id="email" placeholder="Введите почту *">
               </fieldset>
             </div>
 
             <div class="apply-form__app">
-              <fieldset>
+              <fieldset class="apply-form__fieldset">
                 <legend>С каким приложением путешествовали?</legend>
                 <ul class="form-list">
                   <li class="form-list__item">
@@ -127,16 +128,16 @@
             </div>
 
             <div class="apply-form__impressions">
-              <fieldset>
-                <legend>Опишите свои эмоции</legend>
+              <fieldset class="apply-form__fieldset">
+                <legend class="apply-form__emotions">Опишите свои эмоции</legend>
                 <textarea class="apply-form__letter" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
               </fieldset>
             </div>
 
-            <input type="submit" value="Отправить форму" name="submit-form">
+            <input class="button button--green" type="submit" value="Отправить форму" name="submit-form">
           </form>
 
-          <span class="form-section__legend">* &mdash; Обязательные поля</span>
+          <span class="form-section__legend"><span class="form-section__star">*</span> &mdash; Обязательные поля</span>
         </div>
       </section>
 
@@ -161,5 +162,19 @@
       </div>
     </footer>
 
+  <!-- Modals -->
+  <div class="modal modal--error">
+    <b class="bold-text">Что-то пошло не так!</b>
+    <p class="modal__description">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+    <button class="modal__button button button--green">OK</button>
+  </div>
+
+  <div class="modal modal--success">
+    <b class="bold-text">Ваша заявка отправлена</b>
+    <p class="modal__description">Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы рассмотрим ее и оповестим вас.</p>
+    <div class="modal__button-area">
+      <button class="modal__button button button--green">Закрыть окно</button>
+    </div>
+  </div>
   </body>
 </html>
