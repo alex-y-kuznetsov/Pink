@@ -5,36 +5,29 @@
                     url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat,
                      no-repeat;
-  background-position: 50%, 0 0;
+  background-position:0 175px, 0 0;
+
+  .wrapper();
 }
 
 .download__wrapper {
   padding-top: 462px;
 }
 
-
-.download__main-link {
-  font-size: 18px;
-  line-height: 18px;
-  color: @white;
-  text-decoration: none;
-}
-
-.download__description {
-  font-size: 14px;
-  line-height: 24px;
-  color: @white;
-}
-
 @media (min-width: @tablet-width) {
+  .download {
+    background-position: 0 175px, 0 0;
+  }
+
   .download__wrapper {
-    padding: 0;
+    padding-top: 0;
   }
 }
 
 @media (min-width: @desktop-width) {
   .download {
     margin-top: 0;
+    background-position: 0 175px, 0 0;
   }
 
   .download__wrapper {
