@@ -1,0 +1,20 @@
+.wrapper() {
+  &__wrapper {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    @media (min-width: @mobile-width) {
+      width: @mobile-wrapper-width;
+    }
+
+    @media (min-width: @tablet-width) {
+      width: @tablet-wrapper-width;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: @desktop-wrapper-width;
+      padding: 0 10px;
+    }
+  }
+}

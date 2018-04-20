@@ -1,5 +1,29 @@
 .page-header {
   background-color: @blue;
   color: @white;
+
+  width: 100%;
+  .wrapper();
 }
 
+.page-header__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.page-header__menu-window {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+@media (min-width: @desktop-width) {
+  .page-header__wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .page-header__toggle-modal {
+    display: none;
+  }
+}
