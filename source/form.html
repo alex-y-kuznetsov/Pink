@@ -63,17 +63,17 @@
             <div class="apply-form__name">
               <fieldset class="apply-form__fieldset">
                 <label class="apply-form__personal-data" for="last-name">Фамилия:</label>
-                <input type="text" id="last-name" placeholder="Укажите фамилию *" required>
+                <input class="apply-form__text-input" type="text" id="last-name" placeholder="Укажите фамилию *" required>
                 <label class="apply-form__personal-data" for="first-name">Имя:</label>
-                <input type="text" id="first-name" placeholder="Введите имя *" required>
+                <input class="apply-form__text-input" type="text" id="first-name" placeholder="Введите имя *" required>
                 <label class="apply-form__personal-data" for="patronymic">Отчество:</label>
-                <input type="text" id="patronymic" placeholder="Ну и отчество тоже">
+                <input class="apply-form__text-input" type="text" id="patronymic" placeholder="Ну и отчество тоже">
               </fieldset>
             </div>
 
             <div class="apply-form__achievments">
               <fieldset class="apply-form__fieldset">
-                <legend>Ваши безбашенные достижения в путешествии</legend>
+                <legend class="apply-form__legend">Ваши безбашенные достижения в путешествии</legend>
                 <ul class="form-list">
                   <li class="form-list__item">
                     <input type="checkbox" id="achievement1" checked>
@@ -106,15 +106,15 @@
             <div class="apply-form__contacts">
               <fieldset class="apply-form__fieldset">
                 <label class="apply-form__personal-data" for="phone">Номер телефона</label>
-                <input type="tel" id="phone" placeholder="Номер, пожалуйста">
+                <input class="apply-form__text-input" type="tel" id="phone" placeholder="Номер, пожалуйста">
                 <label class="apply-form__personal-data" for="email">Адрес почты</label>
-                <input type="email" id="email" placeholder="Введите почту *">
+                <input class="apply-form__text-input" type="email" id="email" placeholder="Введите почту *">
               </fieldset>
             </div>
 
             <div class="apply-form__app">
               <fieldset class="apply-form__fieldset">
-                <legend>С каким приложением путешествовали?</legend>
+                <legend class="apply-form__legend">С каким приложением путешествовали?</legend>
                 <ul class="form-list">
                   <li class="form-list__item">
                     <input type="radio" name="app" id="app1" checked>
@@ -134,8 +134,8 @@
 
             <div class="apply-form__impressions">
               <fieldset class="apply-form__fieldset">
-                <legend class="apply-form__emotions">Опишите свои эмоции</legend>
-                <textarea class="apply-form__letter" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+                <legend class="apply-form__legend apply-form__emotions">Опишите свои эмоции</legend>
+                <textarea class="apply-form__text-input apply-form__letter" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
               </fieldset>
             </div>
 
