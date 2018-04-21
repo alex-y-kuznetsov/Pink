@@ -1,4 +1,35 @@
 .title-section {
   background-color: @blue;
   color: @white;
+  font-size: 24px;
+  text-align: center;
+
+  margin-top: -66px;
+  padding: 100px 0 55px 0;
+
+  .wrapper();
+}
+
+
+@media (min-width: @tablet-width) {
+  .title-section {
+    padding: 185px 0 82px 0;
+    margin-top: -110px;
+  }
+
+  .title-section__wrapper {
+    width: 620px;
+  }
+}
+
+
+@media (min-width: @desktop-width) {
+  .title-section {
+    padding: 177px 0 100px 0;
+    margin-top: -110px;
+  }
+
+  .title-section__wrapper {
+    width: 820px;
+  }
 }
