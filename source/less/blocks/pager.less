@@ -1,0 +1,26 @@
+.pager {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 60px;
+  padding-left: 0;
+}
+
+.pager__pin {
+  display: flex;
+  width: 8px;
+  height: 8px;
+}
+
+.pager__button {
+  height: 100%;
+  width: 100%;
+  background-color: @dark-grey;
+  border-radius: 50%;
+
+  &--active {
+    border: 3px solid @blue;
+    background-color: @white;
+  }
+}

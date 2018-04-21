@@ -1,0 +1,28 @@
+.page-footer {
+
+  .wrapper();
+  &--main {
+    display: none;
+  }
+}
+
+.page-footer__wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer {
+
+    &--main {
+      display: block;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-footer__wrapper {
+    justify-content: space-around;
+  }
+}
