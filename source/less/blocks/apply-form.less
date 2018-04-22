@@ -25,8 +25,10 @@
   padding-bottom: 45px;
 }
 
-.apply-form__fieldset {
-  border: none;
+.apply-form {
+  fieldset {
+    border: none;
+  }
 }
 
 .apply-form__app,
@@ -124,11 +126,15 @@
     background-color: @white;
   }
 
-  .apply-form__fieldset {
-    border: 2px solid @grey;
-    padding: 45px 60px;
+  .apply-form {
+    fieldset {
+      border: 2px solid @grey;
+      padding: 45px 60px;
+    }
+  }
 
-    &--name {
+  .apply-form__name {
+    fieldset {
       border: none;
     }
   }
@@ -154,20 +160,18 @@
   .apply-form__app,
   .apply-form__name {
     width: 435px;
-  }
 
-  .apply-form__fieldset {
-
-    &--app,
-    &--name {
+    fieldset {
       padding: 45px 0;
     }
   }
 
-  .apply-form__fieldset {
+  .apply-form__group {
+
     &--contacts {
-      display: flex;
-      flex-direction: row;
+      display: inline-flex;
+      flex-direction: column;
+      width: 375px;
     }
   }
 }
