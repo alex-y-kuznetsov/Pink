@@ -60,18 +60,24 @@
         <div class="form-section__wrapper">
           <form action="https://echo.htmlacademy.ru" method="get" class="apply-form">
 
-            <div class="apply-form__name">
-              <fieldset class="apply-form__fieldset">
-                <label class="apply-form__personal-data" for="last-name">Фамилия:</label>
-                <input class="apply-form__text-input" type="text" id="last-name" placeholder="Укажите фамилию *" required>
-                <label class="apply-form__personal-data" for="first-name">Имя:</label>
-                <input class="apply-form__text-input" type="text" id="first-name" placeholder="Введите имя *" required>
-                <label class="apply-form__personal-data" for="patronymic">Отчество:</label>
-                <input class="apply-form__text-input" type="text" id="patronymic" placeholder="Ну и отчество тоже">
+            <div class="apply-form__name apply-form__segment">
+              <fieldset class="apply-form__fieldset apply-form__fieldset--name">
+                <div class="apply-form__group apply-form__group--name">
+                  <label class="apply-form__personal-data apply-form__personal-data--name" for="last-name">Фамилия:</label>
+                  <input class="apply-form__text-input" type="text" id="last-name" placeholder="Укажите фамилию *" required>
+                </div>
+                <div class="apply-form__group apply-form__group--name">
+                  <label class="apply-form__personal-data apply-form__personal-data--name" for="first-name">Имя:</label>
+                  <input class="apply-form__text-input" type="text" id="first-name" placeholder="Введите ваше имя *" required>
+                </div>
+                <div class="apply-form__group apply-form__group--name">
+                  <label class="apply-form__personal-data apply-form__personal-data--name" for="patronymic">Отчество:</label>
+                  <input class="apply-form__text-input" type="text" id="patronymic" placeholder="Ну и отчество тоже">
+                </div>
               </fieldset>
             </div>
 
-            <div class="apply-form__achievments">
+            <div class="apply-form__achievments apply-form__segment">
               <fieldset class="apply-form__fieldset">
                 <legend class="apply-form__legend">Ваши безбашенные достижения в путешествии</legend>
                 <ul class="form-list">
@@ -103,16 +109,21 @@
               </fieldset>
             </div>
 
-            <div class="apply-form__contacts">
+            <div class="apply-form__contacts apply-form__segment">
               <fieldset class="apply-form__fieldset">
-                <label class="apply-form__personal-data" for="phone">Номер телефона</label>
-                <input class="apply-form__text-input" type="tel" id="phone" placeholder="Номер, пожалуйста">
-                <label class="apply-form__personal-data" for="email">Адрес почты</label>
-                <input class="apply-form__text-input" type="email" id="email" placeholder="Введите почту *">
+                <legend class="apply-form__legend apply-form__legend--contacts">Контактная информация</legend>
+                <div class="apply-form__group apply-form__group--contacts">
+                  <label class="apply-form__personal-data apply-form__personal-data--group" for="phone">Номер телефона</label>
+                  <input class="apply-form__text-input" type="tel" id="phone" placeholder="Номер, пожалуйста">
+                </div>
+                <div class="apply-form__group apply-form__group--contacts">
+                  <label class="apply-form__personal-data apply-form__personal-data--group" for="email">Адрес почты</label>
+                  <input class="apply-form__text-input" type="email" id="email" placeholder="Введите почту *">
+                </div>
               </fieldset>
             </div>
 
-            <div class="apply-form__app">
+            <div class="apply-form__app apply-form__segment">
               <fieldset class="apply-form__fieldset">
                 <legend class="apply-form__legend">С каким приложением путешествовали?</legend>
                 <ul class="form-list">
@@ -132,7 +143,7 @@
               </fieldset>
             </div>
 
-            <div class="apply-form__impressions">
+            <div class="apply-form__impressions apply-form__segment">
               <fieldset class="apply-form__fieldset">
                 <legend class="apply-form__legend apply-form__emotions">Опишите свои эмоции</legend>
                 <textarea class="apply-form__text-input apply-form__letter" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
