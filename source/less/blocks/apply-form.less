@@ -135,8 +135,39 @@
 
   .apply-form__legend {
 
-  &--contacts {
-    display: inline;;
+    &--contacts {
+      display: inline;
+    }
   }
 }
+
+@media (min-width: @desktop-width) {
+  .apply-form {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .apply-form__segment {
+    width: 100%;
+  }
+
+  .apply-form__app,
+  .apply-form__name {
+    width: 435px;
+  }
+
+  .apply-form__fieldset {
+
+    &--app,
+    &--name {
+      padding: 45px 0;
+    }
+  }
+
+  .apply-form__fieldset {
+    &--contacts {
+      display: flex;
+      flex-direction: row;
+    }
+  }
 }
