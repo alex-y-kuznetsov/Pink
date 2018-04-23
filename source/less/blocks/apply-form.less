@@ -34,6 +34,7 @@
 .apply-form__app,
 .apply-form__achievments {
   background-color: @grey;
+  position: relative;
 }
 
 .apply-form__text-input {
@@ -44,6 +45,18 @@
 .apply-form__name,
 .apply-form__contacts {
   padding-bottom: 42px;
+}
+
+.apply-form__app::before,
+.apply-form__achievments::before {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 100%;
+  left: -100vw;
+  width: 300vw;
+  background-color: @grey;
+  z-index: -1;
 }
 
 .apply-form__emotions {
@@ -144,6 +157,10 @@
     &--contacts {
       display: inline;
     }
+  }
+  .apply-form__app::before,
+  .apply-form__achievments::before {
+    display: none;
   }
 }
 
