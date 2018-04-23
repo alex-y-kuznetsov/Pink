@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Пинк</title>
     <link href="css/style.css" rel="stylesheet">
   </head>
@@ -10,11 +11,13 @@
     <!-- Header -->
     <header class="page-header">
       <div class="page-header__wrapper">
-        <div class="page-header__menu-window">
-          <a class="page-header__logo-link" href="index.html">
-            <img class="page-header__logo-image" src="#" width="75" height="22" alt="Pink">
-          </a>
-          <button class="toggle-modal page-header__toggle-modal" type="button">Menu</button>
+        <div class="page-header__menu-window menu-window">
+          <div class="menu-window__wrapper">
+            <a class="page-header__logo-link" href="index.html">
+              <img class="page-header__logo-image" src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="Pink">
+            </a>
+            <button class="toggle-modal page-header__toggle-modal" type="button">Menu</button>
+          </div>
         </div>
         <nav class="main-nav">
           <ul class="main-nav__list site-list">
@@ -48,7 +51,7 @@
       <!-- Slogan -->
       <section class="slogan">
         <div class="slogan__wrapper">
-          <h2 class="slogan__item">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните </h2>
+          <h2 class="slogan__item">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! <span class="slogan__item--expand">Пожалуйста, заполните форму ниже:</span></h2>
         </div>
       </section>
 
@@ -57,20 +60,26 @@
         <div class="form-section__wrapper">
           <form action="https://echo.htmlacademy.ru" method="get" class="apply-form">
 
-            <div class="apply-form__name">
-              <fieldset class="apply-form__fieldset">
-                <label class="apply-form__personal-data" for="last-name">Фамилия:</label>
-                <input type="text" id="last-name" placeholder="Укажите фамилию *" required>
-                <label class="apply-form__personal-data" for="first-name">Имя:</label>
-                <input type="text" id="first-name" placeholder="Введите имя *" required>
-                <label class="apply-form__personal-data" for="patronymic">Отчество:</label>
-                <input type="text" id="patronymic" placeholder="Ну и отчество тоже">
+            <div class="apply-form__name apply-form__segment">
+              <fieldset class="apply-form__fieldset apply-form__fieldset--name">
+                <div class="apply-form__group apply-form__group--name">
+                  <label class="apply-form__personal-data apply-form__personal-data--name" for="last-name">Фамилия:</label>
+                  <input class="apply-form__text-input" type="text" id="last-name" placeholder="Укажите фамилию *" required>
+                </div>
+                <div class="apply-form__group apply-form__group--name">
+                  <label class="apply-form__personal-data apply-form__personal-data--name" for="first-name">Имя:</label>
+                  <input class="apply-form__text-input" type="text" id="first-name" placeholder="Введите ваше имя *" required>
+                </div>
+                <div class="apply-form__group apply-form__group--name">
+                  <label class="apply-form__personal-data apply-form__personal-data--name" for="patronymic">Отчество:</label>
+                  <input class="apply-form__text-input" type="text" id="patronymic" placeholder="Ну и отчество тоже">
+                </div>
               </fieldset>
             </div>
 
-            <div class="apply-form__achievments">
+            <div class="apply-form__achievments apply-form__segment">
               <fieldset class="apply-form__fieldset">
-                <legend>Ваши безбашенные достижения в путешествии</legend>
+                <legend class="apply-form__legend">Ваши безбашенные достижения в путешествии</legend>
                 <ul class="form-list">
                   <li class="form-list__item">
                     <input type="checkbox" id="achievement1" checked>
@@ -100,18 +109,23 @@
               </fieldset>
             </div>
 
-            <div class="apply-form__contacts">
-              <fieldset class="apply-form__fieldset">
-                <label class="apply-form__personal-data" for="phone">Номер телефона</label>
-                <input type="tel" id="phone" placeholder="Номер, пожалуйста">
-                <label class="apply-form__personal-data" for="email">Адрес почты</label>
-                <input type="email" id="email" placeholder="Введите почту *">
+            <div class="apply-form__contacts apply-form__segment">
+              <fieldset class="apply-form__fieldset apply-form__fieldset--contacts">
+                <legend class="apply-form__legend apply-form__legend--contacts">Контактная информация</legend>
+                <div class="apply-form__group apply-form__group--contacts">
+                  <label class="apply-form__personal-data apply-form__personal-data--group" for="phone">Номер телефона</label>
+                  <input class="apply-form__text-input" type="tel" id="phone" placeholder="Номер, пожалуйста">
+                </div>
+                <div class="apply-form__group apply-form__group--contacts">
+                  <label class="apply-form__personal-data apply-form__personal-data--group" for="email">Адрес почты</label>
+                  <input class="apply-form__text-input" type="email" id="email" placeholder="Введите почту *">
+                </div>
               </fieldset>
             </div>
 
-            <div class="apply-form__app">
-              <fieldset class="apply-form__fieldset">
-                <legend>С каким приложением путешествовали?</legend>
+            <div class="apply-form__app apply-form__segment">
+              <fieldset class="apply-form__fieldset apply-form__fieldset--app">
+                <legend class="apply-form__legend">С каким приложением путешествовали?</legend>
                 <ul class="form-list">
                   <li class="form-list__item">
                     <input type="radio" name="app" id="app1" checked>
@@ -129,14 +143,14 @@
               </fieldset>
             </div>
 
-            <div class="apply-form__impressions">
+            <div class="apply-form__impressions apply-form__segment">
               <fieldset class="apply-form__fieldset">
-                <legend class="apply-form__emotions">Опишите свои эмоции</legend>
-                <textarea class="apply-form__letter" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+                <legend class="apply-form__legend apply-form__emotions">Опишите свои эмоции</legend>
+                <textarea class="apply-form__text-input apply-form__letter" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
               </fieldset>
             </div>
 
-            <input class="button button--green" type="submit" value="Отправить форму" name="submit-form">
+            <input class="button button--green apply-form__submit" type="submit" value="Отправить форму" name="submit-form">
           </form>
 
           <span class="form-section__legend"><span class="form-section__star">*</span> &mdash; Обязательные поля</span>
@@ -147,19 +161,20 @@
 
     <!-- Footer -->
     <footer class="page-footer">
-      <div class="footer__wrapper">
+      <div class="page-footer__wrapper">
         <div class="logo-block logo-block--footer">
           <a class="logo-block__logo-link" href="index.html">
             <img class="logo-block__logo-image" src="#" width="150" height="50" alt="Pink">
           </a>
         </div>
         <ul class="page-footer__social social-block">
-          <li class="social-block__item"><a class="social-block__link" href="#">Twitter</a></li>
-          <li class="social-block__item"><a class="social-block__link" href="#">Facebook</a></li>
-          <li class="social-block__item"><a class="social-block__link" href="#">Youtube</a></li>
+          <li class="social-block__item"><a class="social-block__link" href="#"><img class="logo-block__image" src="img/icon-twitter.svg" alt="Twitter"></a></li>
+          <li class="social-block__item"><a class="social-block__link" href="#"><img class="logo-block__image" src="img/icon-facebook.svg" alt="Facebook"></a></li>
+          <li class="social-block__item"><a class="social-block__link" href="#"><img class="logo-block__image" src="img/icon-youtube.svg" alt="Youtube"></a></li>
         </ul>
         <div class="copyright">
           <span class="copyright__developed-by">Разработано</span>
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive"><img class="copyright__academy-logo" src="http://via.placeholder.com/27x34"></a>
         </div>
       </div>
     </footer>

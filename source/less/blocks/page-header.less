@@ -2,8 +2,10 @@
   background-color: @blue;
   color: @white;
 
+  display: flex;
+  flex-direction: column;
+
   width: 100%;
-  .wrapper();
 }
 
 .page-header__wrapper {
@@ -11,13 +13,16 @@
   flex-direction: column;
 }
 
+
 .page-header__menu-window {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  padding: 20px 0 25px 0;
 }
 
 @media (min-width: @desktop-width) {
+  .page-header {
+    .wrapper();
+  }
+
   .page-header__wrapper {
     flex-direction: row;
     justify-content: space-between;
@@ -25,5 +30,9 @@
 
   .page-header__toggle-modal {
     display: none;
+  }
+
+  .page-header__menu-window {
+    width: 150px;
   }
 }

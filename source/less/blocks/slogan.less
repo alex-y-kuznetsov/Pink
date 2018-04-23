@@ -1,11 +1,70 @@
+.slogan {
+  padding-top: 42px;
+}
+
 .slogan__item {
   font-size: 14px;
   line-height: 30px;
   font-weight: normal;
   color: @blue;
+  text-align: center;
+  padding: 0;
+  padding-bottom: 33px;
+  margin: 0 auto;
+  width: 280px;
+
+  &--main {
+    font-size: 24px;
+    line-height: normal;
+    width: 205px;
+    margin: 0 auto;
+  }
+
+  &--expand {
+    display: none;
+  }
 }
 
-.slogan__item--main {
-  font-size: 24px;
-  line-height: normal;
+@media (min-width: @tablet-width) {
+  .slogan {
+
+    &--main {
+      padding: 53px 0;
+    }
+  }
+
+  .slogan__item {
+    width: 490px;
+    font-size: 18px;
+
+    &--main {
+      padding-bottom: 0;
+      font-size: 40px;
+      width: 650px;
+    }
+    &--narrow {
+      width: 360px;
+      margin: 0 auto;
+    }
+    &--expand {
+      display: inline;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .slogan {
+
+    &--main {
+      padding: 72px 0 78px 0;
+    }
+  }
+
+  .slogan__item {
+    width: 760px;
+
+    &--narrow {
+      width: 420px;
+    }
+  }
 }

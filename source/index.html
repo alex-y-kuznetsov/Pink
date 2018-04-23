@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Пинк</title>
     <link href="css/style.css" rel="stylesheet">
   </head>
@@ -10,11 +11,13 @@
     <!-- Header -->
     <header class="page-header">
       <div class="page-header__wrapper">
-        <div class="page-header__menu-window">
-          <a class="page-header__logo-link">
-            <img class="page-header__logo-image" src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="Pink">
-          </a>
-          <button class="toggle-modal page-header__toggle-modal" type="button">Menu</button>
+        <div class="page-header__menu-window menu-window">
+          <div class="menu-window__wrapper">
+            <a class="page-header__logo-link">
+              <img class="page-header__logo-image" src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="Pink">
+            </a>
+            <button class="toggle-modal page-header__toggle-modal" type="button">Menu</button>
+          </div>
         </div>
         <nav class="main-nav">
           <ul class="main-nav__list site-list">
@@ -43,21 +46,24 @@
       <section class="download">
         <h2 class="visually-hidden">Скачайте приложение для вашего устройства здесь</h2>
         <div class="download__wrapper">
-          <a class="download__main-link button" href="https://itunes.apple.com/ru/genre/ios/id36?mt=8">Скачать приложение</a>
-          <ul class="download__secondary-links secondary-links">
-            <li class="secondary-links__item"><a class="download__itunes" href="https://itunes.apple.com/ru/genre/ios/id36?mt=8">Itunes</a></li>
-            <li class="secondary-links__item"><a class="download__android" href="https://play.google.com/store?hl=ru">Google Play</a></li>
-            <li class="secondary-links__item"><a class="download__windows" href="https://www.microsoft.com/ru-ru/store/appsvnext/windows-phone">Windows Mobile</a></li>
-          </ul>
-          <p class="download__description">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+          <div class="download__links download-links">
+            <p class="download-links__motto">Взгляните на жизнь иначе!</p>
+            <a class="download-links__main-link button" href="https://itunes.apple.com/ru/genre/ios/id36?mt=8">Скачать приложение</a>
+            <ul class="download-links__secondary-links secondary-links">
+              <li class="secondary-links__item"><a class="download__itunes" href="https://itunes.apple.com/ru/genre/ios/id36?mt=8"><img class="secondary-links__image" src="img/logo-apple.svg" alt="Itunes"></a></li>
+              <li class="secondary-links__item"><a class="download__android" href="https://play.google.com/store?hl=ru"><img class="secondary-links__image" src="img/logo-android.svg" alt="Google Play"></a></li>
+              <li class="secondary-links__item"><a class="download__windows" href="https://www.microsoft.com/ru-ru/store/appsvnext/windows-phone"><img class="secondary-links__image" src="img/logo-microsoft.svg" alt="Windows Mobile"></a></li>
+            </ul>
+            <p class="download-links__description">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+          </div>
         </div>
       </section>
 
       <!-- Slogan Section -->
-      <section class="slogan">
+      <section class="slogan slogan--main">
         <div class="slogan__wrapper">
           <h2 class="slogan__item slogan__item--main">Устали от серости мегаполиса?</h2>
-          <h2 class="slogan__item slogan__item--main">Нам есть, что вам предложить!</h2>
+          <h2 class="slogan__item slogan__item--main slogan__item--narrow">Нам есть, что вам предложить!</h2>
         </div>
       </section>
 
@@ -82,21 +88,30 @@
         </div>
       </section>
 
+      <!-- Effect -->
+      <section class="effect">
+        <div class="effect__wrapper">
+          <b class="effect__advantage bold-text">Эффект на 24 часа!</b>
+          <p class="effect__description">Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
+          <a class="effect__link" href="#">Узнать больше об исследовании</a>
+        </div>
+      </section>
+
       <!-- Feedback -->
       <section class="feedback">
         <h2 class="visually-hidden">Отзывы</h2>
         <div class="feedback__wrapper">
           <div class="feedback__items">
-            <div class="feedback__item feedback__item--acive">
-              <cite class="feedback__name bold-text">Николай Петров</cite>
+            <div class="feedback__item feedback__item--active">
+              <cite class="feedback__name bold-text">Николай Петров<span class="feedback__occupation">25 лет, водитель трамвая</span></cite>
               <blockquote class="feedback__quote">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</blockquote>
             </div>
             <div class="feedback__item">
-              <cite class="feedback__name bold-text">Николай Петров</cite>
+              <cite class="feedback__name bold-text">Николай Петров<span class="feedback__occupation">25 лет, водитель трамвая</span></cite>
               <blockquote class="feedback__quote">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</blockquote>
             </div>
             <div class="feedback__item">
-              <cite class="feedback__name bold-text">Николай Петров</cite>
+              <cite class="feedback__name bold-text">Николай Петров<span class="feedback__occupation">25 лет, водитель трамвая</span></cite>
               <blockquote class="feedback__quote">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</blockquote>
             </div>
           </div>
@@ -113,7 +128,7 @@
         <h2 class="visually-hidden">Наши тарифные планы</h2>
         <div class="plans__wrapper">
           <table class="plans__table plans-table">
-            <tr>
+            <tr class="plans-table__row">
               <th class="plans-table__header">
                 <b class="plans-table__plan">База</b>
                 <span class="plans-table__price">1,99 USD</span>
@@ -127,23 +142,23 @@
                 <span class="plans-table__price">9,99 USD</span>
               </th>
             </tr>
-            <tr>
-              <td>Розовый фильтр</td>
-              <td>Розовый фильтр</td>
-              <td>Розовый фильтр</td>
+            <tr class="plans-table__row">
+              <td class="plans-table__cell">Розовый фильтр</td>
+              <td class="plans-table__cell">Розовый фильтр</td>
+              <td class="plans-table__cell">Розовый фильтр</td>
             </tr>
-            <tr>
-              <td>Смайлики</td>
-              <td>Смайлики</td>
-              <td>Смайлики</td>
+            <tr class="plans-table__row">
+              <td class="plans-table__cell">Смайлики</td>
+              <td class="plans-table__cell">Смайлики</td>
+              <td class="plans-table__cell">Смайлики</td>
             </tr>
-            <tr>
-              <td>Комментарии</td>
-              <td>Комментарии</td>
-              <td>Комментарии</td>
+            <tr class="plans-table__row">
+              <td class="plans-table__cell">Комментарии</td>
+              <td class="plans-table__cell">Комментарии</td>
+              <td class="plans-table__cell">Комментарии</td>
             </tr>
           </table>
-          <ul class="feedback__pager pager">
+          <ul class="plans__pager pager">
             <li class="pager__pin"><a class="pager__button"></a></li>
             <li class="pager__pin"><a class="pager__button pager__button--active"></a></li>
             <li class="pager__pin"><a class="pager__button"></a></li>
@@ -155,18 +170,20 @@
       <section class="contacts">
         <h2 class="visually-hidden">Наши контакты</h2>
         <div class="contacts__wrapper">
-          <p class="contacts__text">Остались вопросы? Свяжитесь с нами!</p>
-          <div class="contacts__item">
-            <b class="contacts__method bold-text">Звоните:</b>
-            <a href="tel:+78125556666" class="contacts__text contacts__phone">+7 (812) 555-66-66</a>
-          </div>
-          <div class="contacts__item">
-            <b class="contacts__method bold-text">Пишите:</b>
-            <a href="mailto:mail@htmlacademy.ru" class="contacts__text contacts__email">mail@htmlacademy.ru</a>
-          </div>
-          <div class="contacts__item">
-            <b class="contacts__method bold-text">Приезжайте в гости:</b>
-            <p class="contacts__text contacts__address">ул. Большая Конюшенная, 19/8</p>
+          <p class="contacts__invite">Остались вопросы? Свяжитесь с нами!</p>
+          <div class="contacts__items">
+            <div class="contacts__item">
+              <b class="contacts__method bold-text">Звоните:</b>
+              <a href="tel:+78125556666" class="contacts__text contacts__phone">+7 (812) 555-66-66</a>
+            </div>
+            <div class="contacts__item contacts__item--email">
+              <b class="contacts__method bold-text">Пишите:</b>
+              <a href="mailto:mail@htmlacademy.ru" class="contacts__text contacts__email">mail@htmlacademy.ru</a>
+            </div>
+            <div class="contacts__item">
+              <b class="contacts__method bold-text">Приезжайте в гости:</b>
+              <p class="contacts__text contacts__address">ул. Большая Конюшенная, 19/8</p>
+            </div>
           </div>
         </div>
       </section>
@@ -182,6 +199,26 @@
       </section>
 
     </main>
+
+    <!-- Footer -->
+    <footer class="page-footer page-footer--main">
+      <div class="page-footer__wrapper">
+        <div class="logo-block logo-block--footer">
+          <a class="logo-block__logo-link">
+            <img class="logo-block__logo-image" src="#" width="150" height="50" alt="Pink">
+          </a>
+        </div>
+        <ul class="page-footer__social social-block">
+          <li class="social-block__item"><a class="social-block__link" href="#"><img class="logo-block__image" src="img/icon-twitter.svg" alt="Twitter"></a></li>
+          <li class="social-block__item"><a class="social-block__link" href="#"><img class="logo-block__image" src="img/icon-facebook.svg" alt="Facebook"></a></li>
+          <li class="social-block__item"><a class="social-block__link" href="#"><img class="logo-block__image" src="img/icon-youtube.svg" alt="Youtube"></a></li>
+        </ul>
+        <div class="copyright">
+          <span class="copyright__developed-by">Разработано</span>
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive"><img class="copyright__academy-logo" src="http://via.placeholder.com/27x34"></a>
+        </div>
+      </div>
+    </footer>
 
   </body>
 </html>

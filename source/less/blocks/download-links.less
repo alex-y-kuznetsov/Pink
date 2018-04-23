@@ -1,0 +1,58 @@
+.download-links {
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  padding: 28px 0 35px 0;
+}
+
+.download-links__motto {
+  font-size: 40px;
+  line-height: normal;
+  color: @white;
+  width: 175px;
+  display: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.download-links__main-link {
+  font-size: 18px;
+  line-height: 18px;
+  color: @white;
+  text-decoration: none;
+
+  border: 3px solid @white;
+  border-radius: 50px;
+  padding: 16px 0;
+  text-align: center;
+
+  display: block;
+  width: 280px;
+}
+
+.download-links__description {
+  font-size: 14px;
+  line-height: 24px;
+  color: @white;
+  text-align: center;
+  margin: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .download-links {
+    width: 300px;
+    padding-top: 97px;
+  }
+
+  .download-links__motto {
+    display: block;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .download-links {
+    padding-top: 113px;
+  }
+}
