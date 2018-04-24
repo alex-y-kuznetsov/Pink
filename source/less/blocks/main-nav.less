@@ -1,7 +1,7 @@
 .main-nav {
-  width: 320px;
-  margin: 0 auto;
-  min-height: 256px;
+  min-width: 320px;
+
+  .wrapper();
 }
 
 .main-nav__link {
@@ -22,10 +22,23 @@
   border-bottom: 1px solid @black;
 }
 
+@media (min-width: @tablet-width) {
+
+}
+
 @media (min-width: @desktop-width) {
+  .menu-window__wrapper {
+    width: 150px;
+  }
+  .main-nav__list {
+    padding-left: 40px 4px;
+  }
   .main-nav__link {
     line-height: 18px;
     text-transform: none;
     border: none;
+    font-weight: normal;
+    padding: 42px 0;
+    background: none;
   }
 }
