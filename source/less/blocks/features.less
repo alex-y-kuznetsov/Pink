@@ -1,11 +1,11 @@
 .features {
   background-color: @grey;
-  padding-top: 70px;
-  padding-bottom: 320px;
+  padding-top: 60px;
+  padding-bottom: 278px;
 
   background-image: url("../img/iphone-screen-mobile@1x.png");
   background-repeat: no-repeat;
-  background-position: 50% 108%;
+  background-position: 50% 109%;
 
   position: relative;
 
@@ -43,21 +43,54 @@
   color: @blue;
   margin: 0;
   padding-bottom: 40px;
+  width: 260px;
 }
 
 
 @media (min-width: @tablet-width) {
   .features {
-    background-position: 20px 20px;
+    background-image: none;
     padding-bottom: 0;
+    padding-top: 30px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      border-bottom: 50px solid @grey;
+      border-left: 100vw solid transparent;
+      top: -50px;
+    }
   }
 
   .features__list {
     padding-left: 310px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 268px;
+      height: 480px;
+      left: 0;
+      top: -74px;
+
+      background-image: url("../img/iphone-screen-mobile@1x.png");
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
   }
 
   .features__item {
     text-align: left;
+  }
+
+  .features__advantage {
+    padding-bottom: 21px;
+  }
+
+  .features__description {
+    width: 310px;
   }
 }
 
@@ -65,6 +98,11 @@
   .features {
     background-image: none;
     padding: 0;
+
+    &::before {
+      border-bottom: 95px solid @grey;
+      top: -95px;
+    }
   }
 
   .features__list {
@@ -72,11 +110,46 @@
     flex-direction: row;
     justify-content: space-between;
     padding: 0;
+
+    &::before {
+      display: none;
+    }
   }
 
   .features__item {
     width: 320px;
-    padding-top: 300px;
+    padding-top: 260px;
     text-align: center;
+    position: relative;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 186px;
+      height: 301px;
+      background-image: url(../img/iphone-screen-mobile@1x.png);
+      background-size: 100%;
+      background-repeat: no-repeat;
+      top: -95px;
+      left: 64px;
+    }
   }
+
+  .features__advantage {
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: bold;
+    width: 230px;
+    margin: 0 auto;
+    padding-bottom: 25px;
+  }
+
+  .features__description {
+     font-size: 18px;
+     line-height: 30px;
+     width: 230px;
+     margin: 0 auto;
+   }
+
 }
