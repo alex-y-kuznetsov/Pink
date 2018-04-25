@@ -7,6 +7,16 @@
   background-repeat: no-repeat;
   background-position: 50% 108%;
 
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    border-bottom: 30px solid @grey;
+    border-left: 100vw solid transparent;
+    top: -30px;
+  }
+
   .wrapper ();
 }
 
