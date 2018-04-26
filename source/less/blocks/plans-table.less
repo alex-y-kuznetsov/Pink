@@ -2,16 +2,54 @@
   text-transform: uppercase;
   padding-bottom: 40px;
   border-collapse: collapse;
+  width: 840px;
 }
 
 .plans-table__cell {
   width: 278px;
   background-color: @white;
   border: 1px solid @dark-grey;
+  padding: 18px 22px 17px 22px;
+
+  &--wide {
+    display: none;
+  }
 }
 
 .plans-table__header {
   background-color: @blue;
+  width: 280px;
+  padding: 19px 0 19px 0;
+  border: 1px solid @dark-grey;
+
+  &--hit {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      height: 73px;
+      width: 73px;
+      top: 0;
+      background-image: url("../img/bg-hit.svg");
+      background-repeat: no-repeat;
+    }
+    &::after {
+      content: "Хит";
+      position: absolute;
+      display: block;
+      height: 73px;
+      width: 73px;
+      color: @white;
+      transform: rotate(-45deg);
+      top: 0;
+      left: 20px;
+    }
+  }
+  &--hidden {
+    display: none;
+  }
 }
 
 .plans-table__plan {
@@ -19,10 +57,37 @@
   line-height: 30px;
   font-weight: bold;
   color: @white;
+  display: block;
 }
 
 .plans-table__price {
   font-size: 24px;
   line-height: 30px;
   color: @white;
+  font-weight: normal;
+}
+
+
+@media (min-width: @tablet-width) {
+  .plans-table__cell,
+  .plans-table__header {
+    width: 155px;
+  }
+
+  .plans-table__cell {
+    font-size: 0;
+
+    &--wide {
+      display: table-cell;
+      font-size: 14px;
+    }
+  }
+
+  .plans-table__header {
+
+    &--hidden {
+      display: block;
+      visibility: hidden;
+    }
+  }
 }

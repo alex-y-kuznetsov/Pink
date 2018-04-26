@@ -1,10 +1,20 @@
 .plans {
   background-color: @grey;
-  padding: 80px 0 45px 0;
+  padding: 65px 0 45px 0;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    border-bottom: 25px solid @grey;
+    border-left: 100vw solid transparent;
+    top: -25px;
+  }
 }
 
 .plans__wrapper {
   overflow: hidden;
+  width: 320px;
 }
 
 .plans__pager {
@@ -14,4 +24,28 @@
 
 .plans__table {
   margin: 0 auto;
+  padding-top: 65px;
+}
+
+@media (max-width: @tablet-width) {
+  .plans__table {
+    transform: translateX(-260px);
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .plans {
+
+    &::before {
+      border-bottom: 50px solid @grey;
+      top: -50px;
+    }
+
+    .wrapper();
+  }
+
+  .plans__wrapper {
+    width: 620px;
+    overflow: visible;
+  }
 }
