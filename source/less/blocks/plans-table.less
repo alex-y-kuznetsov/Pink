@@ -69,6 +69,11 @@
 
 
 @media (min-width: @tablet-width) {
+  .plans-table {
+    width: 620px;
+    text-transform: none;
+  }
+
   .plans-table__cell,
   .plans-table__header {
     width: 155px;
@@ -84,10 +89,14 @@
   }
 
   .plans-table__header {
+    text-transform: uppercase;
 
     &--hidden {
       display: block;
       visibility: hidden;
     }
+  }
+  .plans-table__plan {
+    font-size: 16px;
   }
 }
