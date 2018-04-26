@@ -3,24 +3,34 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 60px;
+  width: 65px;
   padding-left: 0;
 }
 
 .pager__pin {
   display: flex;
-  width: 8px;
-  height: 8px;
+  width: 15px;
+  height: 15px;
+  align-items: center;
 }
 
 .pager__button {
-  height: 100%;
-  width: 100%;
+  width: 6px;
+  height: 6px;
+  margin: auto;
   background-color: @dark-grey;
   border-radius: 50%;
 
   &--active {
+    width: 12px;
+    height: 12px;
     border: 3px solid @blue;
     background-color: @white;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .pager {
+    display: none;
   }
 }

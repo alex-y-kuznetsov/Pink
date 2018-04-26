@@ -9,11 +9,11 @@
   font-style: normal;
   text-align: center;
   display: block;
-  padding-bottom: 25px;
+  padding-bottom: 15px;
 }
 
 .feedback__quote {
-  font-size: 18px;
+  font-size: 14px;
   line-height: 30px;
   color: @blue;
   margin: 0;
@@ -29,7 +29,7 @@
 
 .feedback__item {
   display: none;
-  padding: 50px 0 40px 0;
+  padding: 40px 0 30px 0;
 
   &--active {
     display: block;
@@ -44,6 +44,8 @@
 @media (min-width: @tablet-width) {
   .feedback__item {
     display: none;
+    padding-top: 0;
+    padding-bottom: 20px;
 
     &--active {
       display: flex;
@@ -52,8 +54,15 @@
   }
 
   .feedback__quote {
-    padding-bottom: 42px;
+    font-size: 18px;
+    line-height: 30px;
+    padding-bottom: 35px;
     width: 620px;
+  }
+
+  .feedback__name {
+    font-size: 20px;
+    line-height: 30px;
   }
 
   .feedback__occupation {
@@ -63,13 +72,22 @@
 
 @media (min-width: @desktop-width) {
   .feedback__item {
-    padding-top: 192px;
+    padding-top: 185px;
   }
 
   .feedback__quote {
     font-size: 18px;
     width: 665px;
     margin: 0 auto;
+  }
+
+  .feedback__name {
+    font-size: 24px;
+  }
+
+  .feedback__occupation {
+    font-size: 18px;
+    padding-top: 3px;
   }
 
   .feedback__pager {
