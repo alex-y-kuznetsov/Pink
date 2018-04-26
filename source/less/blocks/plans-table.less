@@ -10,16 +10,38 @@
   background-color: @white;
   border: 1px solid @dark-grey;
   padding: 18px 22px 17px 22px;
+  position: relative;
 
   &--wide {
     display: none;
+
+    &::after {
+      display: none;
+    }
+  }
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 31px;
+    height: 31px;
+    top: 15px;
+    right: 15px;
+    background-repeat: no-repeat;
+    background-image: url("../img/icon-no.svg");
+  }
+  &--yes {
+
+    &::after {
+      background-image: url("../img/icon-yes.svg");
+    }
   }
 }
 
 .plans-table__header {
   background-color: @blue;
   width: 280px;
-  padding: 19px 0 19px 0;
+  padding: 19px 0;
   border: 1px solid @dark-grey;
 
   &--hit {
@@ -32,6 +54,7 @@
       height: 73px;
       width: 73px;
       top: 0;
+      left: 0;
       background-image: url("../img/bg-hit.svg");
       background-repeat: no-repeat;
     }
@@ -43,8 +66,8 @@
       width: 73px;
       color: @white;
       transform: rotate(-45deg);
-      top: 0;
-      left: 20px;
+      top: 8px;
+      left: 5px;
     }
   }
   &--hidden {
@@ -81,22 +104,94 @@
 
   .plans-table__cell {
     font-size: 0;
+    padding: 10px 18px 12px 15px;
 
+    &::after {
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
     &--wide {
       display: table-cell;
       font-size: 14px;
+
+      &::after {
+        display: none;
+      }
     }
   }
 
   .plans-table__header {
     text-transform: uppercase;
+    padding: 12px 0 6px 0;
 
     &--hidden {
       display: block;
       visibility: hidden;
     }
+
+    &--hit {
+      overflow: hidden;
+
+      &::before {
+        left: -10px;
+      }
+
+      &::after {
+       left: 2px;
+       top: 0;
+     }
+    }
   }
+
   .plans-table__plan {
     font-size: 16px;
+  }
+
+  .plans-table__price {
+    font-size: 18px;
+  }
+
+  .plans__pager {
+    display: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .plans-table {
+    width: 940px;
+  }
+
+  .plans-table__header {
+    padding: 17px 0 19px 0;
+
+    &--hit {
+
+      &::before {
+        left: 0;
+      }
+
+      &::after {
+        left: 6px;
+        top: 6px;
+      }
+    }
+  }
+
+  .plans-table__plan {
+    font-size: 18px;
+  }
+
+  .plans-table__price {
+    font-size: 24px;
+  }
+
+  .plans-table__cell {
+    font-size: 0;
+    padding: 17px 18px 18px 21px;
+
+    &--wide {
+      font-size: 18px;
+    }
   }
 }
