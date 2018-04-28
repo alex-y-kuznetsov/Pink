@@ -8,7 +8,7 @@
   line-height: 30px;
 
   &--required-fields {
-    margin: 0 auto;
+    margin: 0;
     width: 180px;
     display: block;
     padding-bottom: 2px;
@@ -17,4 +17,11 @@
 
 .form-section__star {
   color: @red;
+}
+
+@media (min-width: @tablet-width) {
+  .form-section__legend {
+    padding-bottom: 0;
+    padding-top: 4px;
+  }
 }

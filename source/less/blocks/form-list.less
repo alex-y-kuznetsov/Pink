@@ -70,6 +70,23 @@
   }
 }
 
+@media (min-width: @tablet-width) {
+  .form-list__item {
+    padding-left: 60px;
+
+    input[type="radio"]:checked + .form-list__option::after {
+      left: -48px;
+    }
+  }
+
+  .form-list__option {
+
+    &::before {
+      left: -60px;
+    }
+  }
+}
+
 
 @media (min-width: @desktop-width) {
   .form-list {

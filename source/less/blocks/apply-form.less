@@ -101,17 +101,46 @@
   .apply-form {
     display: flex;
     flex-direction: column;
+    padding-bottom: 54px;
+
+    fieldset {
+      border: 2px solid @grey;
+      padding: 47px 60px 10px 58px;
+    }
+  }
+
+  .apply-form__fieldset {
+
+    &--name {
+      padding: 0;
+      padding-top: 36px;
+    }
+
+    &--contacts {
+      padding: 42px 60px 10px 58px;
+    }
   }
 
   .apply-form__achievments {
     background-color: @white;
     order: 4;
+    padding-bottom: 57px;
+
+    fieldset {
+      padding-bottom: 7px;
+    }
   }
 
   .apply-form__contacts {
     order: 3;
     display: flex;
     flex-direction: column;
+    padding-top: 58px;
+    padding-bottom: 58px;
+
+    fieldset {
+      padding: 37px 60px 7px 58px;
+    }
   }
 
   .apply-form__group {
@@ -128,49 +157,83 @@
 
   .apply-form__personal-data {
     padding-top: 18px;
-    padding-bottom: 35px;
+    padding-bottom: 15px;
 
     &--group {
       order: 2;
+      padding: 11px 0 12px 19px;
     }
 
     &--name {
       display: inline;
-      padding-right: 20px;
+      padding-right: 22px;
+      padding-left: 0;
+    }
+
+    &--short {
+      padding-bottom: 0;
     }
   }
 
   .apply-form__impressions {
     order: 5;
+    padding-bottom: 67px;
+
+    fieldset {
+      padding-top: 38px;
+      padding-bottom: 43px;
+    }
+  }
+
+  .apply-form__submit-window {
+    order: 7;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
   }
 
   .apply-form__submit {
     order: 6;
+    margin: 0;
+    width: 300px;
   }
 
   .apply-form__app {
     background-color: @white;
   }
 
-  .apply-form {
+  .apply-form__name {
+    padding-bottom: 6px;
+
     fieldset {
-      border: 2px solid @grey;
-      padding: 45px 60px;
+      border: none;
+      padding: 0;
     }
   }
 
-  .apply-form__name {
-    fieldset {
-      border: none;
-    }
+  .apply-form__letter {
+    height: 192px;
   }
 
   .apply-form__legend {
+    padding-top: 0;
+    padding-bottom: 0;
 
     &--contacts {
       display: inline;
+      width: 262px;
+    }
+
+    &--app {
+      width: 365px;
+    }
+
+    &--achievements {
+      width: 435px;
     }
   }
+
   .apply-form__app::before,
   .apply-form__achievments::before {
     display: none;

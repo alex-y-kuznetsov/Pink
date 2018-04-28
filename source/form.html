@@ -79,7 +79,7 @@
 
             <div class="apply-form__achievments apply-form__segment">
               <fieldset class="apply-form__fieldset">
-                <legend class="apply-form__legend">Ваши безбашенные достижения в путешествии</legend>
+                <legend class="apply-form__legend apply-form__legend--achievements">Ваши безбашенные достижения в путешествии</legend>
                 <ul class="form-list">
                   <li class="form-list__item">
                     <input type="checkbox" id="achievement1" checked>
@@ -117,7 +117,7 @@
                   <input class="apply-form__text-input" type="tel" id="phone" placeholder="Номер, пожалуйста">
                 </div>
                 <div class="apply-form__group apply-form__group--contacts">
-                  <label class="apply-form__personal-data apply-form__personal-data--group" for="email">Адрес почты</label>
+                  <label class="apply-form__personal-data apply-form__personal-data--group apply-form__personal-data--short" for="email">Адрес почты</label>
                   <input class="apply-form__text-input" type="email" id="email" placeholder="Введите почту *">
                 </div>
               </fieldset>
@@ -149,11 +149,12 @@
                 <textarea class="apply-form__text-input apply-form__letter" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
               </fieldset>
             </div>
-
-            <input class="button button--green apply-form__submit" type="submit" value="Отправить форму" name="submit-form">
+            <div class="apply-form__submit-window">
+              <input class="button button--green apply-form__submit" type="submit" value="Отправить форму" name="submit-form">
+              <span class="form-section__legend form-section__legend--required-fields"><span class="form-section__star">*</span> &mdash; Обязательные поля</span>
+            </div>
           </form>
 
-          <span class="form-section__legend form-section__legend--required-fields"><span class="form-section__star">*</span> &mdash; Обязательные поля</span>
         </div>
       </section>
 
