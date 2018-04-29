@@ -58,6 +58,7 @@
 .apply-form__text-input {
   width: 100%;
   padding: 18px 23px 20px 20px;
+  border: 2px solid @border-grey;
 }
 
 .apply-form__app::before,
@@ -237,6 +238,38 @@
   .apply-form__app::before,
   .apply-form__achievments::before {
     display: none;
+  }
+
+  .apply-form__personal-data {
+    &--phone,
+    &--email {
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 60px;
+        height: 60px;
+        top: -60px;
+        right: 0;
+        background-color: @border-grey;
+        background-repeat: no-repeat;
+      }
+    }
+
+
+    &--phone {
+      &::after {
+        background-image: url("../img/icon-phone.svg");
+      }
+    }
+
+    &--email {
+      &::after {
+        background-image: url("../img/icon-mail.svg");
+      }
+    }
   }
 }
 
