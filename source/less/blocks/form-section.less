@@ -13,6 +13,10 @@
     display: block;
     padding-bottom: 2px;
   }
+
+  &--expand {
+    display: none;
+  }
 }
 
 .form-section__star {
@@ -23,5 +27,15 @@
   .form-section__legend {
     padding-bottom: 0;
     padding-top: 4px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form-section__legend {
+    margin-left: 336px;
+    width: auto;
+    &--expand {
+      display: inline;
+    }
   }
 }
