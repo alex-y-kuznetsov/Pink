@@ -13,13 +13,24 @@
   flex-direction: column;
 }
 
+.page-header__logo-image {
+  width: 75px;
+  height: 22px;
+}
 
 .page-header__menu-window {
-  padding: 20px 0 25px 0;
+  padding: 20px 0;
+}
+
+@media (min-width: @tablet-width) {
+  .page-header__menu-window {
+    padding: 44px 0 36px 0;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .page-header {
+    background-color: @blue-transparent;
     .wrapper();
   }
 
@@ -34,5 +45,6 @@
 
   .page-header__menu-window {
     width: 150px;
+    border-bottom: none;
   }
 }

@@ -5,7 +5,7 @@
                     url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat,
                      no-repeat;
-  background-position:0 175px, 0 0;
+  background-position: 0 175px, 0 0;
 
   .wrapper();
 }
@@ -14,23 +14,39 @@
   padding-top: 462px;
 }
 
+.download__links {
+  padding: 28px 0 30px 0;
+}
+
 @media (min-width: @tablet-width) {
   .download {
-    background-position: 0 175px, 0 0;
+    background-size: 70%, cover;
+    background-position: 175px 175px, 0 0;
   }
 
   .download__wrapper {
     padding-top: 0;
   }
+
+  .download__links {
+    padding-top: 97px;
+    padding-bottom: 108px;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .download {
-    margin-top: 0;
-    background-position: 0 175px, 0 0;
+    margin-top: -109px;
+    background-position: 500px 190px, 0 0;
+    background-size: 50%, cover;
   }
 
   .download__wrapper {
     padding: 0;
+  }
+
+  .download__links {
+    padding-top: 219px;
+    padding-bottom: 124px;
   }
 }

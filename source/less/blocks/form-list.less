@@ -4,6 +4,90 @@
   margin: 0;
 }
 
+.form-list__item {
+  padding-bottom: 52px;
+  padding-left: 70px;
+
+  input {
+    display: none;
+  }
+
+  input[type="checkbox"]:checked + .form-list__option::before {
+    background-repeat: no-repeat;
+    background-image: url("../img/icon-yes.svg");
+    background-position: 50% 50%;
+  }
+
+  input[type="radio"]:checked + .form-list__option::after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    background-color: @red;
+    left: -58px;
+    top: 4px;
+    border-radius: 50%;
+  }
+
+  &--short {
+    padding-bottom: 46px;
+  }
+
+  &--app {
+    padding-bottom: 46px;
+  }
+}
+
+.form-list__option {
+  position: relative;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 39px;
+    width: 39px;
+    left: -70px;
+    top: -8px;
+    background-color: @white;
+    border: 1px solid @border-grey;
+  }
+
+  &--achievement {
+
+    &::before {
+      border-radius: 2px;
+    }
+  }
+
+  &--app {
+
+    &::before {
+      border-radius: 50%;
+    }
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .form-list__item {
+    padding-left: 60px;
+
+    input[type="radio"]:checked + .form-list__option::after {
+      left: -48px;
+    }
+  }
+
+  .form-list__option {
+
+    &::before {
+      left: -60px;
+    }
+  }
+}
+
+
 @media (min-width: @desktop-width) {
   .form-list {
     display: flex;
@@ -14,5 +98,9 @@
   .form-list__item {
     width: 320px;
     padding-left: 60px;
+
+    &--app {
+      padding-left: 133px;
+    }
   }
 }

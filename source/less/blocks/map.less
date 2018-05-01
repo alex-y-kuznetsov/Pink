@@ -1,0 +1,40 @@
+.map {
+  max-height: 200px;
+  overflow: hidden;
+
+    &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 35px 160px 0 160px;
+    border-color: @white transparent transparent transparent;
+    width: 100%
+  }
+}
+
+.map__image {
+  width: 100%;
+}
+
+@media (min-width: @tablet-width) {
+  .map {
+    max-height: 375px;
+
+    &::before {
+      border-width: 70px 330px 0 330px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .map {
+    max-height: 500px;
+
+    &::before {
+      border-width: 100px 600px 0 600px;
+    }
+  }
+}
