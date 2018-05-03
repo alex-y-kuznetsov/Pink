@@ -2,3 +2,39 @@
   display: flex;
   flex-direction: column;
 }
+
+.upload-controls__settings {
+  display: flex;
+  flex-direction: column;
+}
+
+.upload-controls__modes {
+  display: flex;
+  flex-direction: row;
+  width: 200px;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+.upload-controls__mode {
+  display: flex;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.upload-controls__icon {
+  margin: auto;
+}
+
+.upload-controls__range {
+  &--fill,
+  &--contrast {
+    display: none;
+  }
+}
+
+.upload-controls__buttons {
+  display: flex;
+  flex-direction: column;
+}
