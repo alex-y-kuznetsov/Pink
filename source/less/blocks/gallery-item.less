@@ -43,13 +43,22 @@
 @media (min-width: @tablet-width) {
   .gallery-item__content {
     padding: 24px 49px 20px 27px;
+    display: flex;
+    flex-direction: column;
   }
 
   .gallery-item__likes {
+    margin-top: auto;
     &--panorama {
       position: absolute;
       right: 65px;
       top: 25px;
+    }
+  }
+
+  .gallery-item__image {
+    &--panorama {
+      height: 509px // Временно для ПП
     }
   }
 }
