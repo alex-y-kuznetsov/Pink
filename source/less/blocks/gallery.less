@@ -7,7 +7,7 @@
 }
 
 .gallery__item {
-  padding-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .gallery__inner {
@@ -16,6 +16,13 @@
 }
 
 @media (min-width: @tablet-width) {
+  .gallery__item {
+    &--panorama {
+        padding-bottom: 50px;
+        margin-bottom: 0;
+      }
+    }
+
   .gallery__inner {
     display: flex;
     flex-direction: row;
@@ -27,6 +34,7 @@
       margin-right: 20px;
       display: flex;
       flex-direction: column;
+      min-height: 455px;
 
       &:nth-child(2n) {
         margin-right: 0;
