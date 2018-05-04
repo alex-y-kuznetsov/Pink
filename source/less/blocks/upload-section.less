@@ -5,9 +5,42 @@
   .wrapper();
 }
 
+.upload-section__image-window {
+  padding-bottom: 36px;
+}
+
 @media (min-width: @tablet-width) {
+  .upload-section {
+    padding-top: 57px;
+  }
+
   .upload-section__wrapper {
     display: flex;
     flex-direction: row;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  // .upload-section {
+  //   position: relative;
+  //   &::before {
+  //   content: "";
+  //   display: block;
+  //   position: absolute;
+  //   height: 100%;
+  //   left: -100vw;
+  //   width: 300vw;
+  //   background-color: @white;
+  //   z-index: -1;
+  //   }
+  // }
+
+  .upload-section__wrapper {
+    width: 780px;
+  }
+
+  .upload-section__image-window {
+    padding-right: 48px;
+    padding-bottom: 49px;
   }
 }

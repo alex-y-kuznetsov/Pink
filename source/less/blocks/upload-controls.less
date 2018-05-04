@@ -6,6 +6,7 @@
 .upload-controls__settings {
   display: flex;
   flex-direction: column;
+  padding-bottom: 65px;
 }
 
 .upload-controls__modes {
@@ -14,6 +15,7 @@
   width: 200px;
   margin: 0 auto;
   justify-content: space-between;
+  padding-bottom: 23px;
 }
 
 .upload-controls__mode {
@@ -21,13 +23,34 @@
   border: none;
   background-color: transparent;
   cursor: pointer;
+  padding: 0;
 }
 
 .upload-controls__icon {
   margin: auto;
 }
 
+.upload-controls__scales {
+  margin: 0 auto;
+}
+
 .upload-controls__range {
+  width: 240px;
+  -webkit-appearance: none;
+  background-color: transparent;
+  height: 2px;
+  border: 1px solid @black;
+
+  &::-webkit-slider-thumb {
+    appearance: none;
+    width: 14px;
+    height: 14px;
+    background-color: @white;
+    border-radius: 50%;
+    border: 2px solid @red;
+    cursor: pointer;
+  }
+
   &--fill,
   &--contrast {
     display: none;
@@ -37,4 +60,111 @@
 .upload-controls__buttons {
   display: flex;
   flex-direction: column;
+  padding-bottom: 25px;
+}
+
+.upload-controls__button {
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: bold;
+  color: @red;
+  text-decoration: none;
+  border: 3px solid @red;
+  border-radius: 50px;
+  padding: 15px 0;
+  text-align: center;
+  display: block;
+  width: 280px;
+  background-color: transparent;
+  cursor: pointer;
+  margin-bottom: 15px;
+
+  &:disabled {
+    color: @dark-grey;
+    border-color: @dark-grey;
+    cursor: auto;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .upload-controls__settings {
+    flex-direction: row;
+    padding-bottom: 57px;
+  }
+
+  .upload-controls__modes {
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 0;
+    width: 50px;
+    padding-left: 47px;
+    padding-right: 53px;
+  }
+
+  .upload-controls__mode {
+    padding-bottom: 30px;
+  }
+
+  .upload-controls__icon {
+    width: 25px;
+
+    &--contrast {
+      width: 17px;
+    }
+  }
+
+  .upload-controls__range {
+    display: block;
+    margin: auto;
+    width: 203px;
+    position: relative;
+    top: -13px;
+  }
+
+  .upload-controls__scales {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 203px;
+  }
+
+  .upload-controls__buttons {
+    padding-bottom: 30px;
+  }
+
+  .upload-controls__button {
+    width: 260px;
+    margin-left: 46px;
+    margin-bottom: 25px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .upload-controls__icon {
+    width: auto;
+  }
+
+  .upload-controls__modes {
+    padding-left: 0;
+    padding-right: 0px;
+    margin-left: 39px;
+    margin-right: 45px;
+  }
+
+  .upload-controls__scales {
+    margin-left: 0;
+  }
+
+  .upload-controls__range {
+    width: 289px;
+  }
+
+  .upload-controls__buttons {
+    flex-direction: row;
+    margin-top: auto;
+  }
+
+  .upload-controls__button {
+    width: 183px;
+  }
 }
