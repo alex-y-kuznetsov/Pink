@@ -14,7 +14,11 @@
         <div class="page-header__menu-window menu-window">
           <div class="menu-window__wrapper">
             <a class="page-header__logo-link">
-              <img class="page-header__logo-image" src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="Pink">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/logo-pink-white-desktop.svg">
+                <source media="(min-width: 660px)" srcset="img/logo-pink-white-tablet.svg">
+                <img class="page-header__logo-image" src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="Pink">
+              </picture>
             </a>
             <button class="toggle-modal page-header__toggle-modal" type="button">Menu</button>
           </div>

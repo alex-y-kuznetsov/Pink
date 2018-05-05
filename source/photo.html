@@ -14,7 +14,11 @@
         <div class="page-header__menu-window menu-window">
           <div class="menu-window__wrapper">
             <a class="page-header__logo-link" href="index.html">
-              <img class="page-header__logo-image" src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="Pink">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/logo-pink-white-desktop.svg">
+                <source media="(min-width: 660px)" srcset="img/logo-pink-white-tablet.svg">
+                <img class="page-header__logo-image" src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="Pink">
+              </picture>
             </a>
             <button class="toggle-modal page-header__toggle-modal" type="button">Menu</button>
           </div>
@@ -209,41 +213,43 @@
       </section>
 
       <!-- Upload Section -->
-      <section class="upload-section">
-        <div class="upload-section__wrapper">
-          <div class="upload-section__image-window">
-            <picture>
-              <source media="(min-width: 1200px)" srcset="img/photo-road-desktop@1x.jpg 1x, img/photo-road-desktop@2x.jpg 2x">
-              <source media="(min-width: 660px)" srcset="img/photo-road-tablet@1x.jpg 1x, img/photo-road-tablet@2x.jpg 2x">
-              <img src="img/photo-road-mobile@1x.jpg" srcset="img/photo-road-mobile@2x.jpg 2x" class="upload-section__image">
-            </picture>
+      <div class="upload-section__desktop-background">
+        <section class="upload-section">
+          <div class="upload-section__wrapper">
+            <div class="upload-section__image-window">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/photo-road-desktop@1x.jpg 1x, img/photo-road-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)" srcset="img/photo-road-tablet@1x.jpg 1x, img/photo-road-tablet@2x.jpg 2x">
+                <img src="img/photo-road-mobile@1x.jpg" srcset="img/photo-road-mobile@2x.jpg 2x" class="upload-section__image">
+              </picture>
+            </div>
+            <form action="https://echo.htmlacademy.ru" method="get" class="upload-section__controls upload-controls">
+              <div class="upload-controls__settings">
+                <div class="upload-controls__modes">
+                  <button type="button" class="upload-controls__mode upload-controls__mode--crop">
+                    <img src="img/icon-editor-crop.svg" class="upload-controls__icon upload-controls__icon--crop" alt="Crop" width="44" height="44">
+                  </button>
+                  <button type="button" class="upload-controls__mode upload-controls__mode--fill">
+                    <img src="img/icon-editor-fill.svg" class="upload-controls__icon upload-controls__icon--fill" alt="Fill" width="48" height="43">
+                  </button>
+                  <button type="button" class="upload-controls__mode upload-controls__mode--contrast">
+                    <img src="img/icon-editor-contrast.svg" class="upload-controls__icon upload-controls__icon--contrast" alt="Contrast" width="32" height="32">
+                  </button>
+                </div>
+                <div class="upload-controls__scales">
+                  <input type="range" class="upload-controls__range upload-controls__range--crop" min="1" max="100" value="85">
+                  <input type="range" class="upload-controls__range upload-controls__range--fill" min="1" max="100">
+                  <input type="range" class="upload-controls__range upload-controls__range--contrast" min="1" max="100">
+                </div>
+              </div>
+              <div class="upload-controls__buttons">
+                <input type="submit" class="upload-controls__button upload-controls__post" value="Запостить">
+                <input type="reset" class="upload-controls__button upload-controls__reset" value="Сбросить" disabled>
+              </div>
+            </form>
           </div>
-          <form action="https://echo.htmlacademy.ru" method="get" class="upload-section__controls upload-controls">
-            <div class="upload-controls__settings">
-              <div class="upload-controls__modes">
-                <button type="button" class="upload-controls__mode upload-controls__mode--crop">
-                  <img src="img/icon-editor-crop.svg" class="upload-controls__icon upload-controls__icon--crop" alt="Crop" width="44" height="44">
-                </button>
-                <button type="button" class="upload-controls__mode upload-controls__mode--fill">
-                  <img src="img/icon-editor-fill.svg" class="upload-controls__icon upload-controls__icon--fill" alt="Fill" width="48" height="43">
-                </button>
-                <button type="button" class="upload-controls__mode upload-controls__mode--contrast">
-                  <img src="img/icon-editor-contrast.svg" class="upload-controls__icon upload-controls__icon--contrast" alt="Contrast" width="32" height="32">
-                </button>
-              </div>
-              <div class="upload-controls__scales">
-                <input type="range" class="upload-controls__range upload-controls__range--crop" min="1" max="100" value="85">
-                <input type="range" class="upload-controls__range upload-controls__range--fill" min="1" max="100">
-                <input type="range" class="upload-controls__range upload-controls__range--contrast" min="1" max="100">
-              </div>
-            </div>
-            <div class="upload-controls__buttons">
-              <input type="submit" class="upload-controls__button upload-controls__post" value="Запостить">
-              <input type="reset" class="upload-controls__button upload-controls__reset" value="Сбросить" disabled>
-            </div>
-          </form>
-        </div>
-      </section>
+        </section>
+      </div>
 
     </main>
 

@@ -24,13 +24,23 @@
 
 @media (min-width: @tablet-width) {
   .page-header__menu-window {
-    padding: 44px 0 36px 0;
+    padding: 24px 0 36px 0;
+  }
+
+  .page-header__toggle-modal {
+    margin-top: 22px;
+  }
+
+  .page-header__logo-image {
+    width: 150px;
+    height: 42px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .page-header {
     background-color: @blue-transparent;
+
     .wrapper();
   }
 
@@ -46,5 +56,6 @@
   .page-header__menu-window {
     width: 150px;
     border-bottom: none;
+    padding-top: 24px;
   }
 }
