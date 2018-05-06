@@ -20,19 +20,40 @@
 
   border-top: 1px solid @light-blue;
   border-bottom: 1px solid @black;
-}
 
-@media (min-width: @tablet-width) {
+  &[href]:hover {
+    color: @red;
+  }
 
+  &[href]:active {
+    color: @grey;
+  }
+
+  &:not([href]) {
+    position: relative;
+
+    &:not([href])::after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background-color: @white;
+      bottom: 32px;
+      left: 0;
+    }
+  }
 }
 
 @media (min-width: @desktop-width) {
   .menu-window__wrapper {
     width: 150px;
   }
+
   .main-nav__list {
     padding-left: 40px 4px;
   }
+
   .main-nav__link {
     line-height: 18px;
     text-transform: none;

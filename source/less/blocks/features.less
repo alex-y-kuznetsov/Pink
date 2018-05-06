@@ -17,6 +17,10 @@
     top: -30px;
   }
 
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/iphone-screen-mobile@2x.png");
+  }
+
   .wrapper ();
 }
 
@@ -75,9 +79,13 @@
       left: 0;
       top: -74px;
 
-      background-image: url("../img/iphone-screen-mobile@1x.png");
+      background-image: url("../img/iphone-screen-3-tablet@1x.png");
       background-repeat: no-repeat;
       background-size: 100%;
+
+      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+        background-image: url("../img/iphone-screen-3-tablet@2x.png");
+      }
     }
   }
 
@@ -117,7 +125,7 @@
   }
 
   .features__item {
-    width: 320px;
+    width: 300px;
     padding-top: 260px;
     text-align: center;
     position: relative;
@@ -126,13 +134,36 @@
       content: "";
       display: block;
       position: absolute;
-      width: 186px;
+      width: 290px;
       height: 301px;
-      background-image: url(../img/iphone-screen-mobile@1x.png);
-      background-size: 100%;
+
       background-repeat: no-repeat;
       top: -95px;
-      left: 64px;
+      left: 7px;
+    }
+
+    &--mood::before {
+      background-image: url("../img/iphone-screen-1-desktop@1x.png");
+
+      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+        background-image: url("../img/iphone-screen-1-desktop@2x.png");
+      }
+    }
+
+    &--world::before {
+      background-image: url("../img/iphone-screen-2-desktop@1x.png");
+
+      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+        background-image: url("../img/iphone-screen-2-desktop@2x.png");
+      }
+    }
+
+    &--friends::before {
+      background-image: url("../img/iphone-screen-3-desktop@1x.png");
+
+      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+        background-image: url("../img/iphone-screen-3-desktop@2x.png");
+      }
     }
   }
 
@@ -146,10 +177,9 @@
   }
 
   .features__description {
-     font-size: 18px;
-     line-height: 30px;
-     width: 230px;
-     margin: 0 auto;
-   }
-
+    font-size: 18px;
+    line-height: 30px;
+    width: 230px;
+    margin: 0 auto;
+  }
 }
