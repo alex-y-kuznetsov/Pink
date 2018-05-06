@@ -28,21 +28,6 @@
   &[href]:active {
     color: @grey;
   }
-
-  &:not([href]) {
-    position: relative;
-
-    &:not([href])::after {
-      content: "";
-      display: block;
-      position: absolute;
-      width: 100%;
-      height: 2px;
-      background-color: @white;
-      bottom: 32px;
-      left: 0;
-    }
-  }
 }
 
 @media (min-width: @desktop-width) {
@@ -61,5 +46,20 @@
     font-weight: normal;
     padding: 45px 0;
     background: none;
+
+    &:not([href]) {
+      position: relative;
+
+      &:not([href])::after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: @white;
+        bottom: 32px;
+        left: 0;
+      }
+    }
   }
 }
