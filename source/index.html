@@ -217,7 +217,11 @@
       <div class="page-footer__wrapper">
         <div class="logo-block logo-block--footer">
           <a class="logo-block__logo-link">
-            <img class="logo-block__logo-image" src="http://via.placeholder.com/148x41" width="150" height="50" alt="Pink">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/logo-pink-blue-desktop.svg">
+              <source media="(min-width: 660px)" srcset="img/logo-pink-blue-mobile.svg">
+              <img class="logo-block__logo-image" src="img/logo-pink-blue-mobile.svg" width="150" height="50" alt="Pink">
+            </picture>
           </a>
         </div>
         <ul class="page-footer__social social-block">
@@ -227,7 +231,7 @@
         </ul>
         <div class="copyright">
           <span class="copyright__developed-by">Разработано</span>
-          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive"><img class="copyright__academy-logo" src="http://via.placeholder.com/27x34"></a>
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive"><img class="copyright__academy-logo" src="img/htmlacademy.svg" width="28" height="35"></a>
         </div>
       </div>
     </footer>

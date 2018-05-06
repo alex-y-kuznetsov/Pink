@@ -11,7 +11,7 @@
 .effect__link {
   color: @red;
   display: block;
-  }
+}
 
 @media (min-width: @tablet-width) {
   .effect {
@@ -26,22 +26,36 @@
     &::before {
       content: "24";
       position: absolute;
-      width: 150px;
-      height: 150px;
-      left: 59px;
-      top: 108px;
-      /* background-image: url(http://via.placeholder.com/239x277); */
+      width: 300px;
+      height: 300px;
+      left: -33px;
+      top: 61px;
       font-size: 96px;
       color: @red;
       font-weight: bold;
-      border: 10px solid @red;
-      border-radius: 50%;
+      background-image: url("../img/icon-timer.svg");
+      background-repeat: no-repeat;
+      background-size: 79%;
+      background-position: 34px 0;
       text-align: center;
       vertical-align: middle;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-self: center;
+      overflow: visible;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      border-radius: 50%;
+      width: 202px;
+      height: 202px;
+      border: 15px solid @red;
+      left: 19px;
+      top: 116px;
     }
   }
 
@@ -77,10 +91,21 @@
     padding-left: 366px;
 
     &::before {
-      width: 299px;
-      height: 346px;
-      top: 27px;
-      background-image: url("http://via.placeholder.com/299x346");
+      width: 400px;
+      height: 400px;
+      top: 16px;
+      left: -52px;
+      font-size: 120px;
+      background-size: 74%;
+      background-position: 52px 12px;
+    }
+
+    &::after {
+      width: 253px;
+      height: 253px;
+      border: 18px solid @red;
+      top: 96px;
+      left: 22px;
     }
   }
 
