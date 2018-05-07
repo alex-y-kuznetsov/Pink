@@ -31,6 +31,18 @@
   font-size: 12px;
   color: @red;
   padding-left: 32px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 12px;
+    height: 13px;
+    top: 3px;
+    background-image: url("../img/icon-heart.svg");
+    background-repeat: no-repeat;
+  }
 }
 
 .gallery-item__image {
@@ -55,10 +67,21 @@
   .gallery-item__likes {
     margin-top: auto;
     padding-left: 0;
+
+    &::before {
+      right: -16px;
+      top: 7px;
+    }
+
     &--panorama {
       position: absolute;
       right: 65px;
       top: 25px;
+
+      &::before {
+        right: -35px;
+        top: 5px;
+      }
     }
   }
 
@@ -79,6 +102,20 @@
   .gallery-item__content {
     &--panorama {
       padding-bottom: 23px;
+    }
+  }
+
+  .gallery-item__likes {
+    &::before {
+      top: 8px;
+      right: -17px;
+    }
+
+    &--panorama {
+      &::before {
+        top: 5px;
+        right: -33px;
+      }
     }
   }
 }
