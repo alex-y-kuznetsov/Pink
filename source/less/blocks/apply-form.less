@@ -98,6 +98,17 @@
   padding-bottom: 39px;
 }
 
+.apply-form__text-input {
+  &:hover {
+    border-color: @black;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: @red;
+  }
+}
+
 @media (min-width: @tablet-width) {
   .apply-form {
     display: flex;
