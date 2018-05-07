@@ -16,6 +16,21 @@
 .page-header__logo-image {
   width: 75px;
   height: 22px;
+
+  &--desktop,
+  &--tablet {
+    display: none;
+  }
+}
+
+.page-header__logo-link[href] {
+  &:hover .page-header__logo-image {
+    fill: @red; // Почему не работает?
+  }
+
+  &:active .page-header__logo-image {
+    opacity: 0.3;
+  }
 }
 
 .page-header__menu-window {
@@ -34,6 +49,15 @@
   .page-header__logo-image {
     width: 150px;
     height: 42px;
+
+    &--tablet {
+      display: inline;
+    }
+
+    &--mobile,
+    &--desktop {
+      display: none;
+    }
   }
 }
 
@@ -47,6 +71,20 @@
   .page-header__wrapper {
     flex-direction: row;
     justify-content: space-between;
+  }
+
+  .page-header__logo-image {
+    width: 150px;
+    height: 42px;
+
+    &--desktop {
+      display: inline;
+    }
+
+    &--mobile,
+    &--tablet {
+      display: none;
+    }
   }
 
   .page-header__toggle-modal {
