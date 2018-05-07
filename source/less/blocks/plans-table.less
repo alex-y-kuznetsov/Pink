@@ -19,22 +19,22 @@
       display: none;
     }
   }
-  &::after {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 31px;
-    height: 31px;
-    top: 15px;
-    right: 15px;
-    background-repeat: no-repeat;
-    background-image: url("../img/icon-no.svg");
-  }
-  &--yes {
+}
 
-    &::after {
-      background-image: url("../img/icon-yes.svg");
-    }
+
+.plans-table__image {
+  position: absolute;
+  width: 31px;
+  height: 31px;
+  top: 15px;
+  right: 15px;
+
+  &--yes {
+    fill: @green;
+  }
+
+  &--no {
+    fill: @red;
   }
 }
 
@@ -58,6 +58,7 @@
       background-image: url("../img/bg-hit.svg");
       background-repeat: no-repeat;
     }
+
     &::after {
       content: "Хит";
       position: absolute;
@@ -70,6 +71,7 @@
       left: 5px;
     }
   }
+
   &--hidden {
     display: none;
   }
@@ -107,18 +109,19 @@
     padding: 10px 18px 12px 15px;
 
     &::after {
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
+
     }
+
     &--wide {
       display: table-cell;
       font-size: 14px;
-
-      &::after {
-        display: none;
-      }
     }
+  }
+
+  .plans-table__image {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
   }
 
   .plans-table__header {
@@ -138,9 +141,9 @@
       }
 
       &::after {
-       left: 2px;
-       top: 0;
-     }
+        left: 2px;
+        top: 0;
+      }
     }
   }
 
