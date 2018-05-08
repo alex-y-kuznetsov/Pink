@@ -24,6 +24,16 @@
   background-color: transparent;
   cursor: pointer;
   padding: 0;
+  fill: @dark-grey;
+
+  &:hover {
+    fill: @pin-grey;
+  }
+
+  &:active,
+  &--active {
+    fill: @red;
+  }
 }
 
 .upload-controls__icon {
@@ -49,6 +59,10 @@
     border-radius: 50%;
     border: 2px solid @red;
     cursor: pointer;
+
+    &:active {
+      background-color: @red;
+    }
   }
 
   &--fill,
@@ -79,12 +93,32 @@
   cursor: pointer;
   margin-bottom: 15px;
 
-  &:disabled {
-    color: @dark-grey;
-    border-color: @dark-grey;
-    cursor: auto;
+  &:hover {
+    color: @white;
+    background-color: @red;
+  }
+
+  &:active {
+    color: @pink;
   }
 }
+
+.upload-controls__reset {
+  color: @dark-grey;
+  border-color: @dark-grey;
+
+  &:hover {
+    color: @pin-grey;
+    border-color: @pin-grey;
+    background-color: transparent;
+  }
+
+  &:active {
+    color: @dark-grey;
+    background-color: @pin-grey;
+  }
+}
+
 
 @media (min-width: @tablet-width) {
   .upload-controls__settings {

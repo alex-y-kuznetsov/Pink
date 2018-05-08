@@ -30,6 +30,16 @@
   padding-bottom: 25px;
   color: @blue;
   text-align: center;
+
+  &[href]:hover {
+    color: @black;
+    text-decoration: underline;
+  }
+
+  &[href]:active {
+    opacity: 0.3;
+    text-decoration: none;
+  }
 }
 
 .contacts__method {

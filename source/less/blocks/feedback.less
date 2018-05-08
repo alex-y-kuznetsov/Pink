@@ -2,6 +2,10 @@
   .wrapper();
 }
 
+.feedback__wrapper {
+  position: relative;
+}
+
 .feedback__name {
   font-size: 18px;
   line-height: 30px;
@@ -41,6 +45,10 @@
   padding-bottom: 65px;
 }
 
+.feedback__switch-slide {
+  display: none;
+}
+
 @media (min-width: @tablet-width) {
   .feedback__item {
     display: none;
@@ -71,6 +79,20 @@
 }
 
 @media (min-width: @desktop-width) {
+  .feedback__wrapper {
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 80px;
+      height: 65px;
+      top: 71px;
+      left: 433px;
+      background-image: url("../img/icon-quotes.svg");
+      background-repeat: no-repeat;
+    }
+  }
+
   .feedback__item {
     padding-top: 185px;
     padding-bottom: 110px;
@@ -93,5 +115,31 @@
 
   .feedback__pager {
     display: none;
+  }
+
+  .feedback__switch-slide {
+    display: block;
+    position: absolute;
+    top: 211px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    fill: @dark-grey;
+
+    &--left {
+      left: -6px;
+    }
+
+    &--right {
+      right: -6px;
+    }
+
+    &:hover {
+      fill: @pin-grey;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 }

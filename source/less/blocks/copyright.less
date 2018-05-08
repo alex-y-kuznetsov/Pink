@@ -6,7 +6,25 @@
 .copyright__developed-by {
   line-height: 18px;
   color: @blue;
+  padding-right: 17px;
 }
+
+.copyright__academy-logo {
+  fill: @red;
+}
+
+.copyright__link {
+  line-height: 0;
+
+  &:hover .copyright__academy-logo {
+    fill: @black;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
 
 @media (min-width: @tablet-width) {
   .copyright__developed-by {

@@ -1,11 +1,22 @@
 .download {
   margin-top: -66px;
   background-color: @blue;
-  background-image: url("../img/iphone-hand-mobile@1x.png"),
-                    url("../img/bg-back-mobile@1x.jpg");
-  background-repeat: no-repeat,
-                     no-repeat;
+  background-image:
+    url("../img/iphone-hand-mobile@1x.png"),
+    url("../img/bg-back-mobile@1x.jpg");
+  background-repeat:
+    no-repeat,
+    no-repeat;
   background-position: 0 175px, 0 0;
+  // background-size: auto auto, 100% auto;
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image:
+      url("../img/iphone-hand-mobile@2x.png"),
+      url("../img/bg-back-mobile@2x.jpg");
+    background-position: 0 184px, -385px -261px;
+    background-size: 258px 286px, cover;
+  }
 
   .wrapper();
 }
@@ -20,8 +31,17 @@
 
 @media (min-width: @tablet-width) {
   .download {
-    background-size: 70%, cover;
-    background-position: 175px 175px, 0 0;
+    background-position: -20px 140px, -269px -45px;
+    background-image:
+      url("../img/iphone-hand-tablet@1x.png"),
+      url("../img/bg-back-tablet@1x.jpg");
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image:
+        url("../img/iphone-hand-tablet@2x.png"),
+        url("../img/bg-back-tablet@2x.jpg");
+      background-size: 700px auto, 1200px auto;
+    }
   }
 
   .download__wrapper {
@@ -37,8 +57,17 @@
 @media (min-width: @desktop-width) {
   .download {
     margin-top: -109px;
-    background-position: 500px 190px, 0 0;
-    background-size: 50%, cover;
+    background-position: 146px 209px, -679px 0;
+    background-image:
+      url("../img/iphone-hand-desktop@1x.png"),
+      url("../img/bg-back-desktop@1x.jpg");
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image:
+        url("../img/iphone-hand-desktop@2x.png"),
+        url("../img/bg-back-desktop@2x.jpg");
+      background-size: 1050px auto, cover;
+    }
   }
 
   .download__wrapper {

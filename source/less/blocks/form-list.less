@@ -30,6 +30,14 @@
     border-radius: 50%;
   }
 
+  &:hover .form-list__option::before {
+    border-color: @blue;
+  }
+
+  &:active .form-list__option::before {
+    border-color: @red;
+  }
+
   &--short {
     padding-bottom: 46px;
   }
@@ -56,14 +64,12 @@
   }
 
   &--achievement {
-
     &::before {
       border-radius: 2px;
     }
   }
 
   &--app {
-
     &::before {
       border-radius: 50%;
     }
@@ -80,7 +86,6 @@
   }
 
   .form-list__option {
-
     &::before {
       left: -60px;
     }
@@ -103,4 +108,41 @@
       padding-left: 133px;
     }
   }
+
+  .form-list--achievements {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .form-list__item {
+      width: 251px;
+
+      &:nth-child(2) {
+        order: 4;
+      }
+
+      &:nth-child(3) {
+        order: 2;
+      }
+
+      &:nth-child(4) {
+        order: 5;
+      }
+
+      &:nth-child(5) {
+        order: 3;
+      }
+
+      &:nth-child(6) {
+        order: 6;
+      }
+
+      &:hover input[type="checkbox"]:checked + .form-list__option::before {
+        background-image: url("../img/icon-yes--red.svg");
+      }
+    }
+  }
 }
+
+
+
