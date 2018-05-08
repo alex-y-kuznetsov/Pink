@@ -13,10 +13,9 @@
   }
 
   input[type="checkbox"]:checked + .form-list__option::before {
-    // background-repeat: no-repeat;
-    // background-image: url("../img/icon-yes.svg");
-    // background-position: 50% 50%;
-    content: url('data:image/svg+xml; utf8, <svg><path fill="red" d="M-60.953,5.167c-0.391-0.391-1.023-0.391-1.414,0L-75.75,18.551l-4.9-4.9c-0.391-0.391-1.023-0.391-1.414,0 s-0.391,1.023,0,1.414l5.607,5.607c0.195,0.195,0.451,0.293,0.707,0.293s0.512-0.098,0.707-0.293l14.09-14.0 C-60.562,6.191-60.562,5.558-60.953,5.167z"/></svg>');
+    background-repeat: no-repeat;
+    background-image: url("../img/icon-yes.svg");
+    background-position: 50% 50%;
   }
 
   input[type="radio"]:checked + .form-list__option::after {
@@ -77,12 +76,6 @@
   }
 }
 
-// .form-list__item {
-//   &:hover .form-list__option::before {
-//     border-color: @blue;
-//   }
-// }
-
 @media (min-width: @tablet-width) {
   .form-list__item {
     padding-left: 60px;
@@ -142,6 +135,10 @@
 
       &:nth-child(6) {
         order: 6;
+      }
+
+      &:hover input[type="checkbox"]:checked + .form-list__option::before {
+        background-image: url("../img/icon-yes--red.svg");
       }
     }
   }
