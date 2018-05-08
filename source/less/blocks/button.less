@@ -13,5 +13,18 @@
     color: @white;
     background-color: @green;
     padding: 16px 47px;
+
+    &:hover {
+      background-color: @green-hover;
+    }
+
+    &:active {
+      background-color: @green-down;
+    }
+
+    &:disabled {
+      background-color: @border-grey;
+      color: @grey;
+    }
   }
 }

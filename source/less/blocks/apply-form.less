@@ -98,9 +98,10 @@
   padding-bottom: 39px;
 }
 
-.apply-form__text-input {
+.apply-form__text-input,
+.apply-form label {
   &:hover {
-    border-color: @black;
+    border-color: @blue;
   }
 
   &:focus {
@@ -260,12 +261,13 @@
         content: "";
         position: absolute;
         display: block;
-        width: 60px;
-        height: 60px;
+        width: 58px;
+        height: 58px;
         top: -60px;
-        right: 0;
+        right: 2px;
         background-color: @border-grey;
         background-repeat: no-repeat;
+        background-position: 50% 50%;
       }
     }
 
@@ -338,19 +340,8 @@
   }
 
   .apply-form__achievements {
-    .form-list {
-      flex-direction: column;
-      height: 165px;
-    }
-
-    .form-list__item {
-      width: 251px;
-      margin-right: 54px;
-
-      &:nth-child(5),
-      &:nth-child(6) {
-        margin-right: 0;
-      }
+    fieldset {
+      padding-right: 18px;
     }
   }
 
