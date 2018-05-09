@@ -9,11 +9,13 @@ var server = require("browser-sync").create();
 var minify = require("gulp-csso");
 var imagemin = require("gulp-imagemin");
 var webp = require("gulp-webp");
+var rename = require("gulp-rename");
 var svgstore = require("gulp-svgstore");
 var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
 var jsmin = require("gulp-jsmin");
 var del = require("del");
+var run = require("run-sequence");
 
 gulp.task("clean", function () {
   return del("build");
