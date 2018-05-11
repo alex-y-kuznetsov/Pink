@@ -69,12 +69,13 @@
   opacity: 0.5;
 }
 
-// .toggle-modal--closed {
-//   width: 50px;
-//   height: 4px;
-//   background-color: @white;
-//   box-shadow: 0 8px 0 0 @white, 0 16px 0 0 @white;
-// }
+@media (min-width: @tablet-width) {
+  .toggle-modal {
+    &--burger {
+      right: 75px;
+    }
+  }
+}
 
 @media (min-width: @desktop-width) {
   .toggle-modal {
