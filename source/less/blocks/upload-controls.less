@@ -6,7 +6,7 @@
 .upload-controls__settings {
   display: flex;
   flex-direction: column;
-  padding-bottom: 65px;
+  padding-bottom: 66px;
 }
 
 .upload-controls__modes {
@@ -16,6 +16,8 @@
   margin: 0 auto;
   justify-content: space-between;
   padding-bottom: 23px;
+  position: relative;
+  left: -5px;
 }
 
 .upload-controls__mode {
@@ -29,15 +31,15 @@
   &:hover {
     fill: @pin-grey;
   }
+}
+
+.upload-controls__icon {
+  margin: auto;
 
   &:active,
   &--active {
     fill: @red;
   }
-}
-
-.upload-controls__icon {
-  margin: auto;
 }
 
 .upload-controls__scales {
@@ -91,7 +93,7 @@
   width: 280px;
   background-color: transparent;
   cursor: pointer;
-  margin-bottom: 15px;
+  margin-bottom: 14px;
 
   &:hover {
     color: @white;
@@ -180,9 +182,13 @@
 
   .upload-controls__modes {
     padding-left: 0;
-    padding-right: 0px;
-    margin-left: 39px;
-    margin-right: 45px;
+    padding-right: 0;
+    margin-left: 43px;
+    margin-right: 41px;
+  }
+
+  .upload-controls__mode {
+    fill: @red;
   }
 
   .upload-controls__scales {
@@ -200,5 +206,6 @@
 
   .upload-controls__button {
     width: 183px;
+    margin-left: 42px;
   }
 }
