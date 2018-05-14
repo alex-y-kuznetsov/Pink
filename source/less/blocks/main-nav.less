@@ -2,6 +2,10 @@
   min-width: 320px;
 
   .wrapper();
+
+  &--hidden {
+    display: none;
+  }
 }
 
 .main-nav__link {
@@ -26,11 +30,18 @@
   }
 
   &[href]:active {
-    color: @grey;
+    color: @white;
+    opacity: 0.3;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .main-nav {
+    &--hidden {
+      display: block;
+    }
+  }
+
   .menu-window__wrapper {
     width: 150px;
   }

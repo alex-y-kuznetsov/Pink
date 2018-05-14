@@ -8,40 +8,75 @@
   display: block;
   position: relative;
 
-  &::before,
-  &::after {
-    content: "";
+  &--cross {
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      height: 5px;
+      width: 30px;
+      background-color: @white;
+      left: 0;
+      top: 8px;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+      box-shadow: none;
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+
+  &--burger {
     position: absolute;
     height: 5px;
-    width: 30px;
+    width: 50px;
     background-color: @white;
-    left: 0;
-    top: 8px;
-  }
-  &::before {
-    transform: rotate(45deg);
-    box-shadow: none;
-  }
-  &::after {
-    transform: rotate(-45deg);
+    right: 20px;
+    top: 30px;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      height: 5px;
+      width: 50px;
+      background-color: @white;
+      left: 0;
+    }
+
+    &::before {
+      top: 10px;
+    }
+
+    &::after {
+      bottom: 10px;
+    }
   }
 }
 
 .toggle-modal:hover::before,
-.toggle-modal:hover::after {
+.toggle-modal:hover::after,
+.toggle-modal--burger:hover {
   background-color: @red;
 }
 
 .toggle-modal:active::before,
-.toggle-modal:active::after {
+.toggle-modal:active::after,
+.toggle-modal:active {
   opacity: 0.5;
 }
 
-.toggle-modal--closed {
-  width: 50px;
-  height: 4px;
-  background-color: @white;
-  box-shadow: 0 8px 0 0 @white, 0 16px 0 0 @white;
+
+@media (min-width: @tablet-width) {
+  .toggle-modal {
+    &--burger {
+      right: 75px;
+    }
+  }
 }
 
 @media (min-width: @desktop-width) {

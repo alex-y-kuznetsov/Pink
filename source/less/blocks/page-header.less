@@ -6,6 +6,10 @@
   flex-direction: column;
 
   width: 100%;
+
+  &--background {
+    background-color: @blue-transparent;
+  }
 }
 
 .page-header__wrapper {
@@ -16,6 +20,7 @@
 .page-header__logo-image {
   width: 75px;
   height: 22px;
+  fill: @white;
 
   &--desktop,
   &--tablet {
@@ -25,7 +30,7 @@
 
 .page-header__logo-link[href] {
   &:hover .page-header__logo-image {
-    fill: @red; // Конфликтует с инлайн стилями
+    fill: @red;
   }
 
   &:active .page-header__logo-image {
@@ -64,6 +69,8 @@
 @media (min-width: @desktop-width) {
   .page-header {
     background-color: @blue-transparent;
+    position: relative;
+    z-index: 1;
 
     .wrapper();
   }

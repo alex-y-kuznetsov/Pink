@@ -22,7 +22,7 @@
               <svg class="page-header__logo-image page-header__logo-image--tablet" width="150" height="42"><use xlink:href="#icon-logo-pink-white-tablet"></use></svg>
               <svg class="page-header__logo-image page-header__logo-image--desktop" width="150" height="42"><use xlink:href="#icon-logo-pink-white-desktop"></use></svg>
             </a>
-            <button class="toggle-modal page-header__toggle-modal" type="button">Menu</button>
+            <button class="toggle-modal toggle-modal--cross page-header__toggle-modal" type="button">Menu</button>
           </div>
         </div>
         <nav class="main-nav">
@@ -245,6 +245,7 @@
         <h2 class="visually-hidden">Карта проезда</h2>
         <div class="map__wrapper">
           <a src="#" class="map__enlarge">
+            <iframe class="map__interactive" src="https://yandex.ru/map-widget/v1/-/CBqOy-HZDA" width="320" height="200" frameborder="0"></iframe>
             <picture>
               <source type="image/webp" media="(min-width: 1200px)" srcset="img/bg-map-desktop@1x.webp 1x, img/bg-map-desktop@2x.webp 2x">
               <source type="image/webp" media="(min-width: 660px)" srcset="img/bg-map-tablet@1x.webp 1x, img/bg-map-desktop@2x.webp 2x">
@@ -287,10 +288,10 @@
         </ul>
         <div class="copyright">
           <span class="copyright__developed-by">Разработано</span>
-          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive"><svg class="copyright__academy-logo" width="28" height="35"><use xlink:href="#icon-htmlacademy"></use></svg></a>
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive"><svg class="copyright__academy-logo" width="27" height="35"><use xlink:href="#icon-logo-htmlacademy"></use></svg></a>
         </div>
       </div>
     </footer>
-
+  <script src="js/scripts.min.js"></script>
   </body>
 </html>
