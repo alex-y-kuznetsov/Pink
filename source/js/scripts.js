@@ -84,4 +84,3 @@ if (submitForm) {
   }
   window.addEventListener("keydown", checkEsc);
 }
-

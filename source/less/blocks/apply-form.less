@@ -122,7 +122,6 @@
   }
 
   .apply-form__fieldset {
-
     &--name {
       padding: 0;
       padding-top: 36px;
@@ -156,11 +155,11 @@
   }
 
   .apply-form__group {
-
     &--contacts {
       display: flex;
       flex-direction: column;
     }
+
     &--name {
       display: flex;
       padding-bottom: 52px;
@@ -184,6 +183,36 @@
 
     &--short {
       padding-bottom: 0;
+    }
+
+    &--phone,
+    &--email {
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 58px;
+        height: 58px;
+        top: -60px;
+        right: 2px;
+        background-color: @border-grey;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+      }
+    }
+
+    &--phone {
+      &::after {
+        background-image: url("../img/icon-phone.svg");
+      }
+    }
+
+    &--email {
+      &::after {
+        background-image: url("../img/icon-mail.svg");
+      }
     }
   }
 
@@ -251,37 +280,37 @@
     display: none;
   }
 
-  .apply-form__personal-data {
-    &--phone,
-    &--email {
-      position: relative;
+  // .apply-form__personal-data {
+  //   &--phone,
+  //   &--email {
+  //     position: relative;
 
-      &::after {
-        content: "";
-        position: absolute;
-        display: block;
-        width: 58px;
-        height: 58px;
-        top: -60px;
-        right: 2px;
-        background-color: @border-grey;
-        background-repeat: no-repeat;
-        background-position: 50% 50%;
-      }
-    }
+  //     &::after {
+  //       content: "";
+  //       position: absolute;
+  //       display: block;
+  //       width: 58px;
+  //       height: 58px;
+  //       top: -60px;
+  //       right: 2px;
+  //       background-color: @border-grey;
+  //       background-repeat: no-repeat;
+  //       background-position: 50% 50%;
+  //     }
+  //   }
 
-    &--phone {
-      &::after {
-        background-image: url("../img/icon-phone.svg");
-      }
-    }
+  //   &--phone {
+  //     &::after {
+  //       background-image: url("../img/icon-phone.svg");
+  //     }
+  //   }
 
-    &--email {
-      &::after {
-        background-image: url("../img/icon-mail.svg");
-      }
-    }
-  }
+  //   &--email {
+  //     &::after {
+  //       background-image: url("../img/icon-mail.svg");
+  //     }
+  //   }
+  // }
 }
 
 @media (min-width: @desktop-width) {
