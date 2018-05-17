@@ -30,6 +30,11 @@
     border-radius: 50%;
   }
 
+  label[for^="achievement"]:focus::before,
+  label[for^="app"]:focus::before {
+    border-color: @blue;
+  }
+
   &:hover .form-list__option::before {
     border-color: @blue;
   }
