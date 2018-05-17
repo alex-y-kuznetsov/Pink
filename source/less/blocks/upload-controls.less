@@ -105,24 +105,23 @@
   &:active {
     color: @pink;
   }
-}
 
-.upload-controls__reset {
-  color: @dark-grey;
-  border-color: @dark-grey;
-
-  &:hover {
-    color: @pin-grey;
-    border-color: @pin-grey;
-    background-color: transparent;
-  }
-
-  &:active {
+  &--reset {
     color: @dark-grey;
-    background-color: @pin-grey;
+    border-color: @dark-grey;
+
+    &:hover {
+      color: @pin-grey;
+      border-color: @pin-grey;
+      background-color: transparent;
+    }
+
+    &:active {
+      color: @dark-grey;
+      background-color: @pin-grey;
+    }
   }
 }
-
 
 @media (min-width: @tablet-width) {
   .upload-controls__settings {
