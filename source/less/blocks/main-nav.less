@@ -30,13 +30,15 @@
   }
 
   &[href]:active {
-    color: @white;
-    opacity: 0.3;
+    color: @white-transparent;
   }
 }
 
 @media (min-width: @desktop-width) {
   .main-nav {
+    position: absolute;
+    margin-left: 235px;
+
     &--hidden {
       display: block;
     }
