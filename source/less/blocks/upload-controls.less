@@ -48,21 +48,22 @@
 
 .upload-controls__range {
   width: 240px;
-  /* stylelint-disable */
-  -webkit-appearance: none;
-  /* stylelint-enable */
   background-color: transparent;
   height: 2px;
   border: 1px solid @black;
+  position: relative;
 
-  &::-webkit-slider-thumb {
-    appearance: none;
+  &::before {
+    content: "";
+    position: absolute;
     width: 14px;
     height: 14px;
     background-color: @white;
     border-radius: 50%;
     border: 2px solid @red;
     cursor: pointer;
+    top: -7px;
+    left: 50px;
 
     &:active {
       background-color: @red;
