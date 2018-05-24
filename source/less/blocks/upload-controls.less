@@ -21,7 +21,6 @@
 }
 
 .upload-controls__mode {
-  display: flex;
   border: none;
   background-color: transparent;
   cursor: pointer;
@@ -108,8 +107,8 @@
   }
 
   &--reset {
-    color: @dark-grey;
-    border-color: @dark-grey;
+    color: @blue-transparent;
+    border-color: @blue-transparent;
 
     &:hover {
       color: @pin-grey;
@@ -140,11 +139,12 @@
   }
 
   .upload-controls__mode {
-    padding-bottom: 30px;
+    padding-bottom: 28px;
   }
 
   .upload-controls__icon {
     width: 25px;
+    fill: @red;
 
     &--contrast {
       width: 17px;
