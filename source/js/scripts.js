@@ -3,7 +3,7 @@
 // Переменные
 var toggleMenu = document.querySelector(".toggle-modal");
 var mainNav = document.querySelector(".main-nav");
-var pageHeader = document.querySelector(".page-header");
+var pageHeader = document.querySelector(".page-header__wrapper");
 var menuWindow = document.querySelector(".menu-window");
 var applyForm = document.querySelector(".apply-form");
 var errorMessage = document.querySelector(".modal--error");
