@@ -1,5 +1,5 @@
 .page-header {
-  background-color: @blue;
+  background-color: @menu-blue;
   color: @white;
 
   display: flex;
@@ -8,13 +8,19 @@
   width: 100%;
 
   &--background {
-    background-color: @blue-transparent;
+    background-color: @background-transparent;
+    position: relative;
+  }
+
+  &--background-transparent {
+    background-color: transparent;
   }
 }
 
 .page-header__wrapper {
   display: flex;
   flex-direction: column;
+  width: auto;
 }
 
 .page-header__logo-image {
@@ -34,6 +40,7 @@
   }
 
   &:active .page-header__logo-image {
+    fill: @white;
     opacity: 0.3;
   }
 }
@@ -68,16 +75,20 @@
 
 @media (min-width: @desktop-width) {
   .page-header {
-    background-color: @blue-transparent;
+    background-color: @background-transparent;
     position: relative;
     z-index: 1;
 
-    .wrapper();
+    // .wrapper();
   }
 
   .page-header__wrapper {
     flex-direction: row;
     justify-content: space-between;
+    background: transparent;
+    position: relative;
+    width: 940px;
+    margin: 0 auto;
   }
 
   .page-header__logo-image {

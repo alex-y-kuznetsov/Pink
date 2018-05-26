@@ -21,7 +21,6 @@
 }
 
 .upload-controls__mode {
-  display: flex;
   border: none;
   background-color: transparent;
   cursor: pointer;
@@ -48,21 +47,22 @@
 
 .upload-controls__range {
   width: 240px;
-  /* stylelint-disable */
-  -webkit-appearance: none;
-  /* stylelint-enable */
   background-color: transparent;
   height: 2px;
   border: 1px solid @black;
+  position: relative;
 
-  &::-webkit-slider-thumb {
-    appearance: none;
+  &::before {
+    content: "";
+    position: absolute;
     width: 14px;
     height: 14px;
     background-color: @white;
     border-radius: 50%;
     border: 2px solid @red;
     cursor: pointer;
+    top: -7px;
+    left: 50px;
 
     &:active {
       background-color: @red;
@@ -105,29 +105,28 @@
   &:active {
     color: @pink;
   }
-}
 
-.upload-controls__reset {
-  color: @dark-grey;
-  border-color: @dark-grey;
+  &--reset {
+    color: @blue-transparent;
+    border-color: @blue-transparent;
 
-  &:hover {
-    color: @pin-grey;
-    border-color: @pin-grey;
-    background-color: transparent;
+    &:hover {
+      color: @pin-grey;
+      border-color: @pin-grey;
+      background-color: transparent;
+    }
+
+    &:active {
+      color: @dark-grey;
+      background-color: @pin-grey;
+    }
   }
-
-  &:active {
-    color: @dark-grey;
-    background-color: @pin-grey;
-  }
 }
-
 
 @media (min-width: @tablet-width) {
   .upload-controls__settings {
     flex-direction: row;
-    padding-bottom: 57px;
+    padding-bottom: 54px;
   }
 
   .upload-controls__modes {
@@ -140,11 +139,12 @@
   }
 
   .upload-controls__mode {
-    padding-bottom: 30px;
+    padding-bottom: 28px;
   }
 
   .upload-controls__icon {
     width: 25px;
+    fill: @red;
 
     &--contrast {
       width: 17px;
@@ -156,7 +156,7 @@
     margin: auto;
     width: 203px;
     position: relative;
-    top: -13px;
+    top: -15px;
   }
 
   .upload-controls__scales {

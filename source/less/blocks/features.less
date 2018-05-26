@@ -117,7 +117,8 @@
   .features__list {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: flex-start;
     padding: 0;
 
     &::before {
@@ -141,6 +142,10 @@
       background-repeat: no-repeat;
       top: -95px;
       left: 7px;
+    }
+
+    &:nth-child(1n+4) {
+      margin-top: 70px;
     }
 
     &--mood::before {

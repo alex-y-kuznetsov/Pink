@@ -16,7 +16,7 @@
   text-decoration: none;
   text-transform: uppercase;
 
-  background-color: @blue;
+  background-color: @menu-blue;
 
   display: block;
   height: 100%;
@@ -30,20 +30,18 @@
   }
 
   &[href]:active {
-    color: @white;
-    opacity: 0.3;
+    opacity: 0.5;
   }
 }
 
 @media (min-width: @desktop-width) {
   .main-nav {
+    position: absolute;
+    left: 230px;
+
     &--hidden {
       display: block;
     }
-  }
-
-  .menu-window__wrapper {
-    width: 150px;
   }
 
   .main-nav__list {

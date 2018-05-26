@@ -4,7 +4,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Пинк</title>
+    <link rel="preload" href="fonts/opensans.woff2" as="font">
+    <link rel="preload" href="fonts/opensansbold.woff2" as="font">
+    <link rel="preload" href="fonts/opensanslight.woff2" as="font">
     <link href="css/style.css" rel="stylesheet">
+    <script>
+      //Picture element HTML5 shiv
+      document.createElement("picture");
+    </script>
+    <script src="js/picturefill.min.js" async></script>
   </head>
   <body class="page-body">
 
@@ -22,7 +30,7 @@
               <svg class="page-header__logo-image page-header__logo-image--tablet" width="150" height="42"><use xlink:href="#icon-logo-pink-white-tablet"></use></svg>
               <svg class="page-header__logo-image page-header__logo-image--desktop" width="150" height="42"><use xlink:href="#icon-logo-pink-white-desktop"></use></svg>
             </a>
-            <button class="toggle-modal toggle-modal--cross page-header__toggle-modal" type="button">Menu</button>
+            <button class="toggle-modal toggle-modal--cross page-header__toggle-modal" type="button" aria-label="Menu"></button>
           </div>
         </div>
         <nav class="main-nav">
@@ -57,7 +65,7 @@
       <!-- Slogan -->
       <section class="slogan">
         <div class="slogan__wrapper">
-          <h2 class="slogan__item slogan__item--inner">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! <span class="slogan__item--expand">Пожалуйста, заполните форму ниже:</span></h2>
+          <h2 class="slogan__item slogan__item--inner">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! <span class="slogan__item slogan__item--expand">Пожалуйста, заполните форму ниже:</span></h2>
         </div>
       </section>
 
@@ -85,31 +93,31 @@
 
             <div class="apply-form__achievements apply-form__segment">
               <fieldset class="apply-form__fieldset">
-                <legend class="apply-form__legend apply-form__legend--achievements">Ваши безбашенные достижения в путешествии</legend>
+                <legend class="apply-form__legend apply-form__legend--achievements" align="center">Ваши безбашенные достижения в путешествии</legend>
                 <ul class="form-list form-list--achievements">
                   <li class="form-list__item">
                     <input type="checkbox" id="achievement1" checked>
-                    <label class="form-list__option form-list__option--achievement" for="achievement1">Сделал селфи с акулой</label>
+                    <label class="form-list__option form-list__option--achievement" for="achievement1" tabindex="0">Сделал селфи с акулой</label>
                   </li>
                   <li class="form-list__item">
                     <input type="checkbox" id="achievement2" checked>
-                    <label class="form-list__option form-list__option--achievement" for="achievement2">Обгорел на пляже</label>
+                    <label class="form-list__option form-list__option--achievement" for="achievement2" tabindex="0">Обгорел на пляже</label>
                   </li>
                   <li class="form-list__item">
                     <input type="checkbox" id="achievement3">
-                    <label class="form-list__option form-list__option--achievement" for="achievement3">Видел Чака Норриса</label>
+                    <label class="form-list__option form-list__option--achievement" for="achievement3" tabindex="0">Видел Чака Норриса</label>
                   </li>
                   <li class="form-list__item">
                     <input type="checkbox" id="achievement4">
-                    <label class="form-list__option form-list__option--achievement" for="achievement4">Накупил сувениров</label>
+                    <label class="form-list__option form-list__option--achievement" for="achievement4" tabindex="0">Накупил сувениров</label>
                   </li>
                   <li class="form-list__item">
                     <input type="checkbox" id="achievement5" checked>
-                    <label class="form-list__option form-list__option--achievement" for="achievement5">Удержал башню</label>
+                    <label class="form-list__option form-list__option--achievement" for="achievement5" tabindex="0">Удержал башню</label>
                   </li>
                   <li class="form-list__item form-list__item--short">
                     <input type="checkbox" id="achievement6">
-                    <label class="form-list__option form-list__option--achievement" for="achievement6">Разгромил отель</label>
+                    <label class="form-list__option form-list__option--achievement" for="achievement6" tabindex="0">Разгромил отель</label>
                   </li>
                 </ul>
               </fieldset>
@@ -117,33 +125,33 @@
 
             <div class="apply-form__contacts apply-form__segment">
               <fieldset class="apply-form__fieldset apply-form__fieldset--contacts">
-                <legend class="apply-form__legend apply-form__legend--contacts">Контактная информация</legend>
+                <legend class="apply-form__legend apply-form__legend--contacts" align="center">Контактная информация</legend>
                 <div class="apply-form__group apply-form__group--contacts">
                   <label class="apply-form__personal-data apply-form__personal-data--group apply-form__personal-data--phone" for="phone">Номер телефона</label>
-                  <input class="apply-form__text-input" type="tel" id="phone" placeholder="Номер, пожалуйста">
+                  <input class="apply-form__text-input apply-form__text-input--phone" type="tel" id="phone" placeholder="Номер, пожалуйста">
                 </div>
                 <div class="apply-form__group apply-form__group--contacts">
                   <label class="apply-form__personal-data apply-form__personal-data--group apply-form__personal-data--short apply-form__personal-data--email" for="email">Адрес почты</label>
-                  <input class="apply-form__text-input apply-form__text-input--required" type="email" id="email" placeholder="Введите почту *" required>
+                  <input class="apply-form__text-input apply-form__text-input--required apply-form__text-input--email" type="email" id="email" placeholder="Введите почту *" required>
                 </div>
               </fieldset>
             </div>
 
             <div class="apply-form__app apply-form__segment">
               <fieldset class="apply-form__fieldset apply-form__fieldset--app">
-                <legend class="apply-form__legend apply-form__legend--app">С каким приложением путешествовали?</legend>
+                <legend class="apply-form__legend apply-form__legend--app" align="center">С каким приложением путешествовали?</legend>
                 <ul class="form-list">
                   <li class="form-list__item form-list__item--app">
                     <input type="radio" name="app" id="app1" checked>
-                    <label class="form-list__option form-list__option--app" for="app1">Pink для iOS</label>
+                    <label class="form-list__option form-list__option--app" for="app1" tabindex="0">Pink для iOS</label>
                   </li>
                   <li class="form-list__item form-list__item--app">
                     <input type="radio" name="app" id="app2">
-                    <label class="form-list__option form-list__option--app" for="app2">Pink для Android</label>
+                    <label class="form-list__option form-list__option--app" for="app2" tabindex="0">Pink для Android</label>
                   </li>
                   <li class="form-list__item form-list__item--app">
                     <input type="radio" name="app" id="app3">
-                    <label class="form-list__option form-list__option--app" for="app3">Windows Phone</label>
+                    <label class="form-list__option form-list__option--app" for="app3" tabindex="0">Windows Phone</label>
                   </li>
                 </ul>
               </fieldset>
@@ -151,7 +159,7 @@
 
             <div class="apply-form__impressions apply-form__segment">
               <fieldset class="apply-form__fieldset">
-                <legend class="apply-form__legend apply-form__emotions">Опишите свои эмоции</legend>
+                <legend class="apply-form__legend apply-form__emotions" align="center">Опишите свои эмоции</legend>
                 <textarea class="apply-form__text-input apply-form__letter" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
               </fieldset>
             </div>
@@ -170,31 +178,31 @@
     <footer class="page-footer">
       <div class="page-footer__wrapper">
         <div class="page-footer__logo-block logo-block logo-block--footer page-footer__logo-block--form">
-          <a class="page-footer__logo-link logo-block__logo-link" href="index.html">
+          <a class="page-footer__logo-link logo-block__logo-link" href="index.html" aria-label="Преход на главную страницу">
             <svg class="page-footer__logo-image page-footer__logo-image--mobile" width="150" height="42"><use xlink:href="#icon-logo-pink-blue-mobile"></use></svg>
             <svg class="page-footer__logo-image page-footer__logo-image--desktop" width="150" height="42"><use xlink:href="#icon-logo-pink-blue-desktop"></use></svg>
           </a>
         </div>
         <ul class="page-footer__social social-block">
           <li class="social-block__item">
-            <a class="social-block__link" href="#">
+            <a class="social-block__link" href="#" aria-label="Ссылка на Твиттер">
               <svg class="social-block__image" width="18" height="15"><use xlink:href="#icon-twitter"></use></svg>
             </a>
           </li>
           <li class="social-block__item">
-            <a class="social-block__link" href="#">
+            <a class="social-block__link" href="#" aria-label="Ссылка на Фэйсбук">
               <svg class="social-block__image" width="9" height="20"><use xlink:href="#icon-facebook"></use></svg>
             </a>
           </li>
           <li class="social-block__item">
-            <a class="social-block__link" href="#">
+            <a class="social-block__link" href="#" aria-label="Ссылка на Ютюб">
               <svg class="social-block__image" width="15" height="14"><use xlink:href="#icon-youtube"></use></svg>
             </a>
           </li>
         </ul>
         <div class="copyright copyright--form">
           <span class="copyright__developed-by">Разработано</span>
-          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive"><svg class="copyright__academy-logo" width="28" height="35"><use xlink:href="#icon-logo-htmlacademy"></use></svg></a>
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Переход на страницу HTMLAcademy"><svg class="copyright__academy-logo" width="28" height="35"><use xlink:href="#icon-logo-htmlacademy"></use></svg></a>
         </div>
       </div>
     </footer>
@@ -204,7 +212,7 @@
     <b class="bold-text modal__message">Что-то пошло не так!</b>
     <p class="modal__description modal__description--error">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
     <div class="modal__button-area modal__button-area--error">
-      <button class="modal__button button button--green">OK</button>
+      <button type="button" class="modal__button button button--green">OK</button>
     </div>
   </div>
 
@@ -212,7 +220,7 @@
     <b class="bold-text modal__message">Ваша заявка отправлена</b>
     <p class="modal__description">Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы рассмотрим ее и оповестим вас.</p>
     <div class="modal__button-area">
-      <button class="modal__button button button--green">Закрыть окно</button>
+      <button type="button" class="modal__button button button--green">Закрыть окно</button>
     </div>
   </div>
 

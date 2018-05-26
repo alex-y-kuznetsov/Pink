@@ -1,12 +1,12 @@
 .toggle-modal {
-  font-size: 0;
   background-color: transparent;
   border: none;
   cursor: pointer;
   height: 26px;
   width: 26px;
   display: block;
-  position: relative;
+  position: absolute;
+  right: 20px;
 
   &--cross {
     &::before,
@@ -64,8 +64,6 @@
   background-color: @red;
 }
 
-.toggle-modal:active::before,
-.toggle-modal:active::after,
 .toggle-modal:active {
   opacity: 0.5;
 }
@@ -74,7 +72,7 @@
 @media (min-width: @tablet-width) {
   .toggle-modal {
     &--burger {
-      right: 75px;
+      right: 20px;
     }
   }
 }

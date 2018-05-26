@@ -34,6 +34,9 @@
   width: 220px;
   padding-bottom: 44px;
   padding-top: 38px;
+  display: table;
+  float: none;
+  margin: 0 auto;
 
   &--contacts {
     display: none;
@@ -85,6 +88,8 @@
   height: 200px;
   line-height: 30px;
   padding-top: 13px;
+  max-width: 100%;
+  resize: none;
 }
 
 .apply-form__submit {
@@ -118,6 +123,7 @@
     fieldset {
       border: 2px solid @grey;
       padding: 47px 60px 10px 58px;
+      // position: relative;
     }
   }
 
@@ -216,6 +222,13 @@
     }
   }
 
+  .apply-form__text-input {
+    &--phone,
+    &--email {
+      height: 62px;
+    }
+  }
+
   .apply-form__impressions {
     order: 5;
     padding-bottom: 67px;
@@ -260,9 +273,16 @@
   .apply-form__legend {
     padding-top: 0;
     padding-bottom: 0;
+    // position: absolute;
+    // display: block;
+    // padding: 0 30px;
+    // background-color: white;
+    // top: -10px;
+    // left: 50%;
+    // transform: translateX(-50%);
 
     &--contacts {
-      display: inline;
+      display: block;
       width: 262px;
     }
 
@@ -279,38 +299,6 @@
   .apply-form__achievements::before {
     display: none;
   }
-
-  // .apply-form__personal-data {
-  //   &--phone,
-  //   &--email {
-  //     position: relative;
-
-  //     &::after {
-  //       content: "";
-  //       position: absolute;
-  //       display: block;
-  //       width: 58px;
-  //       height: 58px;
-  //       top: -60px;
-  //       right: 2px;
-  //       background-color: @border-grey;
-  //       background-repeat: no-repeat;
-  //       background-position: 50% 50%;
-  //     }
-  //   }
-
-  //   &--phone {
-  //     &::after {
-  //       background-image: url("../img/icon-phone.svg");
-  //     }
-  //   }
-
-  //   &--email {
-  //     &::after {
-  //       background-image: url("../img/icon-mail.svg");
-  //     }
-  //   }
-  // }
 }
 
 @media (min-width: @desktop-width) {
@@ -340,6 +328,7 @@
 
     fieldset {
       padding-left: 0;
+      padding-right: 0;
       padding-top: 48px;
     }
   }

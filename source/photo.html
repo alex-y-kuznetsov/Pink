@@ -4,7 +4,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Пинк</title>
+    <link rel="preload" href="fonts/opensans.woff2" as="font">
+    <link rel="preload" href="fonts/opensansbold.woff2" as="font">
+    <link rel="preload" href="fonts/opensanslight.woff2" as="font">
     <link href="css/style.css" rel="stylesheet">
+    <script>
+      //Picture element HTML5 shiv
+      document.createElement("picture");
+    </script>
+    <script src="js/picturefill.min.js" async></script>
   </head>
   <body class="page-body">
 
@@ -22,7 +30,7 @@
               <svg class="page-header__logo-image page-header__logo-image--tablet" width="150" height="42"><use xlink:href="#icon-logo-pink-white-tablet"></use></svg>
               <svg class="page-header__logo-image page-header__logo-image--desktop" width="150" height="42"><use xlink:href="#icon-logo-pink-white-desktop"></use></svg>
             </a>
-            <button class="toggle-modal toggle-modal--cross page-header__toggle-modal" type="button">Menu</button>
+            <button class="toggle-modal toggle-modal--cross page-header__toggle-modal" type="button" aria-label="Menu"></button>
           </div>
         </div>
         <nav class="main-nav">
@@ -236,7 +244,7 @@
       </section>
 
       <!-- Upload Section -->
-      <div class="upload-section__desktop-background">
+      <div class="page-main__desktop-background">
         <section class="upload-section">
           <div class="upload-section__wrapper">
             <div class="upload-section__image-window">
@@ -252,31 +260,31 @@
             <form action="https://echo.htmlacademy.ru" method="get" class="upload-section__controls upload-controls">
               <div class="upload-controls__settings">
                 <div class="upload-controls__modes">
-                  <button type="button" class="upload-controls__mode upload-controls__mode--crop">
+                  <button type="button" class="upload-controls__mode upload-controls__mode--crop" aria-label="Обрезка фото">
                     <svg class="upload-controls__icon upload-controls__icon--crop upload-controls__icon--active" width="44" height="44">
                       <use xlink:href="#icon-editor-crop"></use>
                     </svg>
                   </button>
-                  <button type="button" class="upload-controls__mode upload-controls__mode--fill">
+                  <button type="button" class="upload-controls__mode upload-controls__mode--fill" aria-label="Заливка фото">
                     <svg class="upload-controls__icon upload-controls__icon--fill" width="48" height="43">
                       <use xlink:href="#icon-editor-fill"></use>
                     </svg>
                   </button>
-                  <button type="button" class="upload-controls__mode upload-controls__mode--contrast">
+                  <button type="button" class="upload-controls__mode upload-controls__mode--contrast" aria-label="Контраст фото">
                     <svg class="upload-controls__icon upload-controls__icon--contrast" width="32" height="32">
                       <use xlink:href="#icon-editor-contrast"></use>
                     </svg>
                   </button>
                 </div>
                 <div class="upload-controls__scales">
-                  <input type="range" class="upload-controls__range upload-controls__range--crop" min="1" max="100" value="85">
-                  <input type="range" class="upload-controls__range upload-controls__range--fill" min="1" max="100">
-                  <input type="range" class="upload-controls__range upload-controls__range--contrast" min="1" max="100">
+                  <div class="upload-controls__range upload-controls__range--crop"></div>
+                  <div class="upload-controls__range upload-controls__range--fill"></div>
+                  <div class="upload-controls__range upload-controls__range--contrast"></div>
                 </div>
               </div>
               <div class="upload-controls__buttons">
-                <input type="submit" class="upload-controls__button upload-controls__post" value="Запостить">
-                <input type="reset" class="upload-controls__button upload-controls__reset" value="Сбросить">
+                <input type="submit" class="upload-controls__button" value="Запостить">
+                <input type="reset" class="upload-controls__button upload-controls__button--reset" value="Отмена">
               </div>
             </form>
           </div>
@@ -289,31 +297,31 @@
     <footer class="page-footer">
       <div class="page-footer__wrapper">
         <div class="page-footer__logo-block logo-block logo-block--footer">
-          <a class="page-footer__logo-link logo-block__logo-link" href="index.html">
+          <a class="page-footer__logo-link logo-block__logo-link" href="index.html" aria-label="Переход на главную страницу">
             <svg class="page-footer__logo-image page-footer__logo-image--mobile" width="150" height="42"><use xlink:href="#icon-logo-pink-blue-mobile"></use></svg>
             <svg class="page-footer__logo-image page-footer__logo-image--desktop" width="150" height="42"><use xlink:href="#icon-logo-pink-blue-desktop"></use></svg>
           </a>
         </div>
         <ul class="page-footer__social social-block">
           <li class="social-block__item">
-            <a class="social-block__link" href="#">
+            <a class="social-block__link" href="#" aria-label="Ссылка на Твиттер">
               <svg class="social-block__image" width="18" height="15"><use xlink:href="#icon-twitter"></use></svg>
             </a>
           </li>
           <li class="social-block__item">
-            <a class="social-block__link" href="#">
+            <a class="social-block__link" href="#" aria-label="Ссылка на Фэйсбук">
               <svg class="social-block__image" width="9" height="20"><use xlink:href="#icon-facebook"></use></svg>
             </a>
           </li>
           <li class="social-block__item">
-            <a class="social-block__link" href="#">
+            <a class="social-block__link" href="#" aria-label="Ссылка на Ютюб">
               <svg class="social-block__image" width="15" height="14"><use xlink:href="#icon-youtube"></use></svg>
             </a>
           </li>
         </ul>
         <div class="copyright">
           <span class="copyright__developed-by">Разработано</span>
-          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive"><svg class="copyright__academy-logo" width="28" height="35"><use xlink:href="#icon-logo-htmlacademy"></use></svg></a>
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Переход на страницу HTMLAcademy"><svg class="copyright__academy-logo" width="28" height="35"><use xlink:href="#icon-logo-htmlacademy"></use></svg></a>
         </div>
       </div>
     </footer>

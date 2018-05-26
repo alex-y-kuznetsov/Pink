@@ -3,7 +3,8 @@
 // Переменные
 var toggleMenu = document.querySelector(".toggle-modal");
 var mainNav = document.querySelector(".main-nav");
-var pageHeader = document.querySelector(".page-header");
+var pageHeader = document.querySelector(".page-header__wrapper");
+var pageHeaderBack = document.querySelector(".page-header");
 var menuWindow = document.querySelector(".menu-window");
 var applyForm = document.querySelector(".apply-form");
 var errorMessage = document.querySelector(".modal--error");
@@ -21,12 +22,14 @@ var openMenu = function () {
       toggleMenu.classList.remove("toggle-modal--burger");
       toggleMenu.classList.add("toggle-modal--cross");
       pageHeader.classList.remove("page-header--background");
+      pageHeaderBack.classList.remove("page-header--background-transparent");
       menuWindow.classList.remove("menu-window--closed");
   } else {
     mainNav.classList.add("main-nav--hidden");
     toggleMenu.classList.add("toggle-modal--burger");
     toggleMenu.classList.remove("toggle-modal--cross");
     pageHeader.classList.add("page-header--background");
+    pageHeaderBack.classList.add("page-header--background-transparent");
     menuWindow.classList.add("menu-window--closed");
   };
 };

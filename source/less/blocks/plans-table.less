@@ -7,9 +7,9 @@
 
 .plans-table__cell {
   width: 278px;
+  min-height: 60px;
   background-color: @white;
-  border: 1px solid @dark-grey;
-  padding: 18px 22px 17px 22px;
+  padding: 18px 22px 18px 22px;
   position: relative;
 
   &--wide {
@@ -21,6 +21,11 @@
   }
 }
 
+.plans-table__cell,
+.plans-table__header {
+  box-shadow: inset 0 0 0 1px @dark-grey;
+  border: none;
+}
 
 .plans-table__image {
   position: absolute;
@@ -41,8 +46,7 @@
 .plans-table__header {
   background-color: @blue;
   width: 280px;
-  padding: 17px 0 20px 0;
-  border: 1px solid @dark-grey;
+  padding: 17px 0 22px 0;
 
   &--hit {
     position: relative;
@@ -116,13 +120,13 @@
 
   .plans-table__image {
     left: 50%;
-    top: 50%;
+    top: 25px;
     transform: translate(-50%, -50%);
   }
 
   .plans-table__header {
     text-transform: uppercase;
-    padding: 12px 0 6px 0;
+    padding: 12px 0 9px 0;
 
     &--hidden {
       display: block;
@@ -161,8 +165,12 @@
     width: 940px;
   }
 
+  .plans-table__image {
+    top: 31px;
+  }
+
   .plans-table__header {
-    padding: 15px 0 20px 0;
+    padding: 15px 0 22px 0;
 
     &--hit {
       &::before {
@@ -186,7 +194,7 @@
 
   .plans-table__cell {
     font-size: 0;
-    padding: 17px 18px 18px 21px;
+    padding: 19px 18px 18px 21px;
 
     &--wide {
       font-size: 18px;
